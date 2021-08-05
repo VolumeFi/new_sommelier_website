@@ -3,8 +3,10 @@ $blue-light: #92ccf0;
 $blue-extra-dark: #131128;
 $blue-extra-light: #211f3e;
 $black: #000;
+$text-black: #011120;
 $gray-dark: #b5b2d6;
 $gray: #ecedef;
+$footer-gray: #F3F2F4;
 $green-regular: #33a437;
 $red: #d00000;
 $pink: #d3387c;
@@ -58,6 +60,8 @@ $border: 1px solid rgba(0, 0, 0, 0.08);
 $border-bg: 2px solid rgba(0, 0, 0, 0.08);
 
 $box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+
+$divider: #2F2B4F;
 
 // Padding - TODO: these should match font size scales
 $padding-xs: 0.5rem; // 8px
