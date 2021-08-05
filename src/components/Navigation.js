@@ -42,9 +42,7 @@ const Nav = ({ settings, lang, pathname }) => {
           {showMenu && (
             <div className='flex-grow-1 nav-container__menu-container'>
               <ul className='ml-auto'>
-                {
 
-                }
                 <li key={1} >
                   <a href='/#features' onClick={(e) => handleMoveToSection(e, 'features')} className='nav-menu-item'>Features</a>
                 </li>
@@ -54,42 +52,25 @@ const Nav = ({ settings, lang, pathname }) => {
                 </li>
 
                 <li key={3} >
-                  <a href='/resources' className='nav-menu-item'>Resources</a>
-                </li>
-
-                <li key={4} >
                   <a href='/#about' onClick={(e) => handleMoveToSection(e, 'about')} className='nav-menu-item'>About</a>
                 </li>
 
-
-                <li key={5} >
+                <li key={4} >
                   <Link to={`https://t.me/getsomm`} className='nav-menu-item' target='new'>
                     {`Community`}
                   </Link>
                 </li>
 
-                <li key={6} >
-                  <Link to={`/events/`} className='nav-menu-item'>
-                    {`Events`}
-                  </Link>
-                </li>
-
-                <li key={7} >
+                <li key={5} >
                   <Link to={`/blog/`} className='nav-menu-item'>
                     {`Blog`}
-                  </Link>
-                </li>
-
-                <li key={6} >
-                  <Link to={`/jobs`} className='nav-menu-item' >
-                    {`Jobs`}
                   </Link>
                 </li>
 
                 <li key={999} className='d-flex align-items-center launch-button'>
                   <a href="https://app.sommelier.finance" className='nav-menu-item nav-menu-item--launch' target="_blank">
                   <img src={frameImg} alt='frame image' className='mr-2'/>
-                    Launch Application
+                    Add Liquidity
                   </a>
                 </li>
               </ul>
