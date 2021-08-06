@@ -52,7 +52,7 @@ const Nav = ({ settings, lang, pathname }) => {
                 </li>
 
                 <li key={3} >
-                  <a href='/#about' onClick={(e) => handleMoveToSection(e, 'about')} className='nav-menu-item'>About</a>
+                  <a href='/about-us' className='nav-menu-item'>About</a>
                 </li>
 
                 <li key={4} >

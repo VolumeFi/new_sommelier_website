@@ -581,6 +581,7 @@
   // Team
   .main-team {
     max-width: 82.75rem;
+    padding-top: 117px;
     margin: 0 auto;
     @include respond-to(mobile) {
       margin-left: 0;
@@ -674,5 +675,39 @@
     //     }
     //   }
     // }
+  }
+  .main-what {
+    display: flex;
+    padding-top: 132px;
+    padding-bottom: 132px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+      width: 444px;
+      margin-left: -222px;
+    }
+
+    &__right {
+      width: 444px;
+      margin-right: -222px;
+    }
+
+    &__middle {
+      flex: 1;
+      max-width: 700px;
+
+      h1 {
+        font-size: 5.625rem;
+        text-align: center;
+      }
+      p {
+        font-size: 1.5625rem;
+        line-height: 2rem;
+        color: $white;
+        margin-top: 50px;
+        text-align: center;
+      }
+    }
   }
 }
