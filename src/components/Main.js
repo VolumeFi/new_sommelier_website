@@ -228,10 +228,10 @@ export default function Main() {
         <div className='main-top__left-container'>
           <div>
             <p className='new'>NEW</p>
-            <h1 className='text-uppercase d-lg-block d-md-none d-block sommelier'>
+            <h1 className='d-block sommelier'>
               Sommelier
             </h1>
-            <h1 className='text-uppercase d-lg-block d-md-none d-block cellars'>
+            <h1 className='d-block cellars'>
               CELLARS
             </h1>
             <p className='caption-text-small mt-3'>Automated Liquidity Management<br/>for Decentralized Finance</p>
