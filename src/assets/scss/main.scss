@@ -138,9 +138,9 @@
     color: #ff488e;
   }
   .main-top {
-    // padding-right: 100px;
+    padding-bottom: 73px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     @include respond-to(tablet) {
       flex-direction: row;
     }
@@ -151,7 +151,7 @@
   .main-top__left-container {
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 2.75rem;
     @include respond-to(desktop) {
       // width: 50%;
@@ -163,7 +163,6 @@
         align-items: left;
         p.new {
           font-size: 1.25rem;
-          color: $white;
         }
         h1, p {
           text-align: left;
@@ -199,29 +198,35 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       @include respond-to(mobile) {
         // margin-left: 2.75rem;
         // margin-right: 2.75rem;
       }
       .launch-button {
-        margin-top: 4.063rem;
+        margin-top: 46px;
         @include respond-to(mobile) {
           margin-top: 1rem;
         }
       }
     }
     h1, p {
+      @include font-base($font-family-lato, normal, 600);
       text-align: left;
       @include respond-to(tablet) {
-        text-align: center;
+        text-align: left;
       }
       @include respond-to(mobile) {
-        text-align: center;
+        text-align: left;
       }
     }
+    p.new {
+      text-align: left;
+      color: $white;
+    }
     .launch-button {
-      margin-top: 4.063rem;
+      @include font-base($font-family-lato-bold, bold, 600);
+      margin-top: 46px;
       @include respond-to(mobile) {
         margin-top: 2.125rem;
       }

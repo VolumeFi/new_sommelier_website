@@ -6,17 +6,17 @@ body {
 
 h1 {
   @include heading-h1();
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 h2 {
   @include heading-h2();
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 h3 {
   @include heading-h3();
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 h4 {
@@ -115,26 +115,28 @@ h4 {
   }
   .nav-menu-item--launch {
     // width: 12.313rem; //197px
+    // @include font-base($font-family-barlow, normal, 700);
+    // text-decoration: none;
+    // font-size: 1.5625rem;
+    padding: 0.94935rem 1.13921875rem;
+    color: $white;
+    border-radius: 10.6327px;
+    border: 3.22px solid #E323FF;
+    // margin-top: 60px;
     height: 2.688rem; //43px
-    padding: 16px 32px;
     display: flex;
     align-items: center;
-    transition-duration: 0.4s;
+    // transition-duration: 0.4s;
     cursor: pointer;
     // border: 1px solid $dark-white;
-    background: $pink;
-    img {
-      width: 0.813rem; // 13px
-      height: 0.813rem; // 13px
-    }
     @include respond-to(desktop) {
       margin-left: 1rem;
     }
   }
-  .nav-menu-item--launch:hover {
-    background-color: $dark-white;
-    color: #ff488e;
-  }
+  // .nav-menu-item--launch:hover {
+  //   background-color: $dark-white;
+  //   color: #ff488e;
+  // }
 }
 
 // Footer
