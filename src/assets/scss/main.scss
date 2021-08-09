@@ -594,87 +594,16 @@
         margin-left: 2.75rem;
       }
     }
-    .main-team__top, .main-team__down {
-      display: none;
-      @include respond-to(tablet) {
-        display: none;
-      }
-      @include respond-to(desktop) {
-        display: block;
-      }
-    }
-    .main-team__all {
-      display: block;
-      overflow: scroll;
-      @include respond-to(tablet) {
-        display: block;
-        overflow: hidden;
-      }
-      @include respond-to(desktop) {
-        display: none;
-        overflow: hidden;
-      }
-    }
-    .main-team__all::-webkit-scrollbar {
-      display: none;
-    }
-    .main-team__top ul {
+    .main-team__content {
+      padding: 116px 180px;
       display: flex;
+      flex-flow: row wrap;
       justify-content: center;
-      margin: 0;
-      margin-top: 4.4rem;
-      list-style-type: none;
-      padding: 0;
-      overflow: hidden;
-      li {
+
+      &-member {
         width: 33%;
-        .profile-container {
-          margin: 13px;
-          .img-avatar {
-            width: 10.75rem !important;
-            height: 10.75rem !important;
-            @include respond-to(mobile) {
-              width: 6.25rem !important;
-              height: 6.25rem !important;
-              border-radius: 1.625rem im !important;
-            }
-          }
-        }
       }
     }
-    .main-team__down ul, .main-team__all ul {
-      list-style-type: none;
-      padding: 0;
-      overflow: hidden;
-      li {
-        float: left;
-        width: 50%;
-        .profile-container {
-          margin: 13px;
-          .img-avatar {
-            width: 10.75rem !important;
-            height: 10.75rem !important;
-            @include respond-to(mobile) {
-              width: 6.25rem !important;
-              height: 6.25rem !important;
-              border-radius: 1.625rem im !important;
-            }
-          }
-        }
-      }
-    }
-    // .main-team__all ul {
-    //   list-style-type: none;
-    //   padding: 0;
-    //   overflow: hidden;
-    //   li {
-    //     float: left;
-    //     width: 50%;
-    //     .profile-container {
-    //       margin: 13px;
-    //     }
-    //   }
-    // }
   }
   .main-what {
     display: flex;
@@ -696,6 +625,9 @@
     &__middle {
       flex: 1;
       max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       h1 {
         font-size: 5.625rem;
@@ -708,6 +640,39 @@
         margin-top: 50px;
         text-align: center;
       }
+
+      .launch-button {
+        margin-top: 48px;
+      }
+    }
+  }
+  .main-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 125px;
+
+    &-item {
+      padding: 18px 70px;
+      background: $panel-black;
+      display: flex;
+      max-width: 988px;
+      margin-bottom: 24px;
+    }
+    &-title {
+      color: $white;
+      font-size: 1.625rem;
+      font-weight: 800;
+      line-height: 149%;
+      flex: 1;
+    }
+    &-description {
+      color: $white;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 149%;
+      margin-left: 100px;
+      width: 431px;
     }
   }
 }
