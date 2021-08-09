@@ -13,18 +13,20 @@ const Container = styled.div`
     max-width: 10.75rem;
   }
   h3 {
+    font-family: 'Lato Regular';
     margin-top: 1.625rem;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
   }
   p {
+    font-family: 'Lato Regular';
     margin-top: 0.625rem;
     background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.625rem;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 149%;
   }
   .caption-container {
@@ -35,7 +37,7 @@ const Container = styled.div`
         margin-left: 0.9rem;
         margin-right: 0.9rem;
         width: 36px;
-        height: 36px;
+        height: 36px; 
       }
     }
   }

@@ -100,7 +100,7 @@
     }
   }
   .launch-button {
-    @include font-base($font-family-barlow, normal, 700);
+    @include font-base($font-family-lato, normal, bold);
     font-size: 1.5625rem; // 26px
     background: $white;
     max-width: 19.625rem; // 314px
@@ -295,10 +295,13 @@
     p {
       font-size: 3.125rem;
       margin-top: 30px;
+      @include font-base($font-family-barlow, bold, 600);
     }
     .add-liquidity-button {
+      @include font-base($font-family-lato-bold, bold, 600);
       text-decoration: none;
       font-size: 1.5625rem;
+      line-height: 1.5rem;
       padding: 0.94935rem 1.13921875rem;
       border-radius: 10.6327px;
       color: $white;
@@ -337,12 +340,14 @@
       padding: 25px;
 
       h4 {
+        @include font-base($font-family-lato, normal, 800);
         text-align: center;
         color: $text-black;
         font-size: 1.5625rem;
         line-height: 1.875rem;
       }
       p {
+        @include font-base($font-family-lato, normal, normal);
         margin-top: 40px;
         text-align: center;
         color: $text-black;
@@ -378,6 +383,7 @@
         }
 
         h3 {
+          @include font-base($font-family-lato, normal, 800);
           font-size: 1.5625rem;
           font-weight: 800;
           line-height: 1.875rem;
@@ -386,6 +392,7 @@
         }
 
         p {
+          @include font-base($font-family-lato, normal, normal);
           font-size: 1.25rem;
           font-weight: normal;
           line-height: 149%;
@@ -593,6 +600,8 @@
       margin-right: 0;
     }
     h2 {
+      font-size: 3.125rem;
+      line-height: 3.375rem;
       text-align: center;
       @include respond-to(mobile) {
         text-align: left;
@@ -635,10 +644,11 @@
       align-items: center;
 
       h1 {
-        font-size: 5.625rem;
+        font-size: 5rem;
         text-align: center;
       }
       p {
+        @include font-base($font-family-lato, normal, 600);
         font-size: 1.5625rem;
         line-height: 2rem;
         color: $white;
@@ -648,6 +658,7 @@
 
       .launch-button {
         margin-top: 48px;
+        line-height: 1.5rem;
       }
     }
   }
@@ -665,6 +676,7 @@
       margin-bottom: 24px;
     }
     &-title {
+      @include font-base($font-family-lato, normal, 800);
       color: $white;
       font-size: 1.625rem;
       font-weight: 800;
@@ -672,6 +684,7 @@
       flex: 1;
     }
     &-description {
+      @include font-base($font-family-lato, normal, 600);
       color: $white;
       font-size: 1.25rem;
       font-weight: 600;
