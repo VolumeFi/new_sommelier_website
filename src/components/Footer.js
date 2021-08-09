@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="text-center flex flex-col items-center py-20 mx-auto">
       <div className='footer-investors section-container'>
-        <h2 className="text-center">INVESTORS</h2>
+        <h2 className="text-center">Investors</h2>
         <div className='footer-investors__img-container'>
           <img src={cygnilabsImg} width='112' />
           <img src={standardImg} width='134' />
