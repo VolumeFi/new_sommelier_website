@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Link from 'gatsby-link'
-import Profile from '../components/Profile'
-import {isMobileOnly} from 'react-device-detect'
+import ProfileNew from '../components/ProfileNew'
 
 import "../assets/scss/main.scss"
 
@@ -19,98 +17,80 @@ import spiral1Img from '@images/spiral-1.png'
 import spiral2Img from '@images/spiral-2.png'
 import coinsImg from '@images/coins.png'
 
-const frameImg = '/images/Frame.png'
-const etheriumImg = '/images/etherium.png'
-const etheriumImg1 = '/images/etherium-1.png'
-const etheriumMobileImg = '/images/img-ether-mobile.png'
-const cosmosImg = '/images/cosmos.png'
-const etherbridgeImg = '/images/ether-bridge.png'
-const secureImg = '/images/secure.png'
-const automatedImg = '/images/automated.png'
-// Use Cases
-const imperImg = '/images/impermanent.png'
-const rebalancingImg = '/images/rebalancing.png'
-const lowerImg = '/images/lower-ether.png'
-const greaterImg = '/images/greater.png'
-// Roadmap
-const stickImg = '/images/roadmap-stick1.png'
-const stickMobileImg = '/images/roadmap-stick-mobile.png'
-// About
-const aboutImg = '/images/img-about1.png'
+import photoZaki from '@images/team/zaki.png'
+import photoJack from '@images/team/jack.png'
+import photoKevin from '@images/team/kevin.png'
+import photoTony from '@images/team/tony.png'
+import photoJustin from '@images/team/justin.png'
+import photoDeborah from '@images/team/deborah.png'
+import photoLucky from '@images/team/lucky.png'
+
 // Team
 const teamMembers = [
   {
     name: 'Zaki Manian',
     role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-zaki.png',
+    avatar: photoZaki,
     twitter: 'https://twitter.com/zmanian',
     linkedin: 'https://www.linkedin.com/in/zmanian'
   },
   {
     name: 'Jack Zampolin',
     role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-jack.png',
+    avatar: photoJack,
     twitter: 'https://twitter.com/jack_zampolin',
     linkedin: 'https://www.linkedin.com/in/jackzampolin/'
   },
   {
     name: 'Kevin Kennis',
     role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-kevin.png',
+    avatar: photoKevin,
     twitter: 'https://twitter.com/kevinvkennis',
     linkedin: 'https://www.linkedin.com/in/kkennis/'
   },
-  // {
-  //   name: 'Tony Arcieri',
-  //   role: 'Co-Founder',
-  //   avatar: '/images/avatar/avatar-tony.png',
-  //   twitter: 'https://twitter.com/bascule',
-  //   linkedin: 'https://www.linkedin.com/in/tarcieri'
-  // },
-  // {
-  //   name: 'Justin Kilpatrick',
-  //   role: 'Co-Founder',
-  //   avatar: '/images/avatar/avatar-justin.png',
-  //   twitter: 'https://twitter.com/ttk314',
-  //   linkedin: 'https://www.linkedin.com/in/kilpatrickjustin/'
-  // },
-  // {
-  //   name: 'Deborah Simpier',
-  //   role: 'Co-Founder',
-  //   avatar: '/images/avatar/avatar-deborah.png',
-  //   twitter: 'https://twitter.com/DeborahSimpier',
-  //   linkedin: 'https://www.linkedin.com/in/deborah-simpier-a88063169/'
-  // },
-  // {
-  //   name: 'Lucky Odisetti',
-  //   role: 'Product Lead',
-  //   avatar: '/images/avatar/avatar-lucky.png',
-  //   twitter: 'https://twitter.com/luckyOdiseti',
-  //   linkedin: 'https://www.linkedin.com/in/lucky-odisetti-701b5437'
-  // }
+  {
+    name: 'Tony Arcieri',
+    role: 'Co-Founder',
+    avatar: photoTony,
+    twitter: 'https://twitter.com/bascule',
+    linkedin: 'https://www.linkedin.com/in/tarcieri'
+  },
+  {
+    name: 'Justin Kilpatrick',
+    role: 'Co-Founder',
+    avatar: photoJustin,
+    twitter: 'https://twitter.com/ttk314',
+    linkedin: 'https://www.linkedin.com/in/kilpatrickjustin/'
+  },
+  {
+    name: 'Deborah Simpier',
+    role: 'Co-Founder',
+    avatar: photoDeborah,
+    twitter: 'https://twitter.com/DeborahSimpier',
+    linkedin: 'https://www.linkedin.com/in/deborah-simpier-a88063169/'
+  },
+  {
+    name: 'Lucky Odisetti',
+    role: 'Product Lead',
+    avatar: photoLucky,
+    twitter: 'https://twitter.com/luckyOdiseti',
+    linkedin: 'https://www.linkedin.com/in/lucky-odisetti-701b5437'
+  }
 ]
 
-const usecasesData = [
+const featuresData = [
   {
-    img: imperImg,
-    title: 'Impermanent Loss Protection',
-    description: 'Automatically rebalance your portfolio when pool performance changes such that Impermanent and unrealized losses require a change in strategy',
+    title: 'Decentralized Portfolio Management',
+    description: 'Validator set portfolio management with full user funds control.',
   },
   {
-    img: rebalancingImg,
-    title: 'Automated Portfolio Rebalancing',
-    description: 'Automatically rebalance portfolio to focus on high yield Liquidity Provider opportunities and exit lower yielding opportunities',
+    title: 'Automated Portfolio Rebalancing ',
+    description: 'Automatically rebalance portfolio to focus on high yield Liquidity Provider opportunities and exit lower yielding opportunities.',
   },
   {
-    img: lowerImg,
-    title: 'Lower Ethereum Gas Transaction Fees',
-    description: 'Aggregating and batching transactions with Sommelier will yield lower gas prices for LP growing demand to manage pool position and performance',
-  },
-  {
-    img: greaterImg,
-    title: 'Greater Liquidity Momentum',
-    description: 'Native transaction batching and roll-ups deliver greater liquidity momentum to capture onchain yield on the Ethereum blockchain',
-  },
+    title: 'Compounding Fees Across AMMs and Networks',
+    description: 'Automatically compounding fees without need for active intervention.',
+  }
 ]
 
 // Investors
@@ -177,23 +157,31 @@ export default function AboutUsPage() {
         <div className='main-what__middle'>
           <h1>What is Sommelier?</h1>
           <p>Sommelier is a bet that Ethereum will be a dominant player in the global economy. Sommelier consists of the Cosmos Stargate SDK, its Tendermint-based consensus layer and a decentralized, bi-directional Ethereum bridge, managed by a global network of validators.</p>
+          <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
+            <span>Add Liquidity</span>
+            <img src={coinsImg} alt='frame image' className='mr-2'/>
+          </a>
         </div>
         <div className='main-what__right'>
           <img src={spiral2Img} alt='frame image' />
         </div>
       </div>
+      <div className='main-feature section-container'>
+        {featuresData.map((item, index) => (
+          <div className='main-feature-item' key={`about-features-${index}`}>
+            <div className='main-feature-title'>{item.title}</div>
+            <div className='main-feature-description'>{item.description}</div>
+          </div>
+        ))}
+      </div>
       <div className='main-team section-container'>
         <h2>Sommelier Team</h2>
-        <div className='main-team__top'>
-          {teamMembers && (
-            <ul>
-              {teamMembers.map((item, index) => (
-                <li>
-                  <Profile data={item} isPortrait={true} />
-                </li>
-              ))}
-            </ul>
-          )}
+        <div className='main-team__content'>
+          {teamMembers.map((item, index) => (
+            <div className='main-team__content-member'>
+              <ProfileNew data={item} /> 
+            </div>
+          ))}
         </div>
       </div>
     </div>
