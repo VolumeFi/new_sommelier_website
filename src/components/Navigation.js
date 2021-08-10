@@ -3,7 +3,7 @@ import React from 'react'
 import SbEditable from 'storyblok-react'
 import {isMobileOnly} from 'react-device-detect'
 
-const frameImg = '/images/Frame.png'
+import logoImg from '@images/logo.png'
 
 const Nav = ({ settings, lang, pathname }) => {
   const [showMenu, setShowMenu] = React.useState(!isMobileOnly)
@@ -35,7 +35,8 @@ const Nav = ({ settings, lang, pathname }) => {
               <img src='/images/button-hamburger.png' width='24' />
             </button>
             <Link to='/'>
-              <p className='nav-title m-0'>SOMMELIER</p>
+              <img src={logoImg} />
+              {/* <p className='nav-title m-0'>SOMMELIER</p> */}
             </Link>
 
           </div>
