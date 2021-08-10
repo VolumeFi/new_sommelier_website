@@ -7,9 +7,9 @@ NOTE: by default, type elements should not have top margins
 */
 
 @mixin font-base($font-family, $font-style, $font-weight) {
-  font-family: $font-family;
-  font-style: $font-style;
-  font-weight: $font-weight;
+  font-family: $font-family !important;
+  font-style: $font-style !important;
+  font-weight: $font-weight !important;
   margin-top: 0;
 }
 
@@ -19,19 +19,12 @@ NOTE: by default, type elements should not have top margins
 // Tablet: Header / H2;
 // Desktop: Header / H1;
 @mixin heading-h1($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow-bold, bold, 700);
+  @include font-base($font-family-barlow, normal, 700);
   color: $color;
-  font-size: 2.75rem; // 44px
-  // letter-spacing: -0.01em;
-  line-height: 96.1%;
+  font-size: 80px !important;
+  line-height: 20px;
   text-align: $textAlign;
-  @include respond-to(tablet) {
-    font-size: 4.375rem; // 70px
-  }
-  @include respond-to(desktop) {
-    font-size: 5.063rem; // 81x
-    // margin-bottom: 1.5rem;
-  }
+  letter-spacing: 0em;
 }
 
 // NOTE: Use for all <h2> elements
@@ -40,19 +33,12 @@ NOTE: by default, type elements should not have top margins
 // Tablet: Header / H2;
 // Desktop: Header / H1;
 @mixin heading-h2($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow-bold, bold, 500);
+  @include font-base($font-family-barlow, normal, 700);
   color: $color;
-  font-size: 1.75rem; // 28px
-  // letter-spacing: -0.01em;
-  line-height: 133.1%;
+  font-size: 60px !important;
+  line-height: 72px;
   text-align: $textAlign;
-  @include respond-to(tablet) {
-    font-size: 4rem; // 70px
-  }
-  @include respond-to(desktop) {
-    font-size: 3.875rem; // 68x
-    // margin-bottom: 1.5rem;
-  }
+  letter-spacing: 0em;
 }
 
 // NOTE: Use for all <h3> elements
@@ -61,15 +47,12 @@ NOTE: by default, type elements should not have top margins
 // Tablet: Header / H2;
 // Desktop: Header / H1;
 @mixin heading-h3($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow-bold, bold, 500);
+  @include font-base($font-family-barlow, normal, 600);
   color: $color;
-  font-size: 2.125rem; // 34px
-  // letter-spacing: -0.01em;
-  line-height: 93.1%;
+  font-size: 50px !important;
+  line-height: 43px;
   text-align: $textAlign;
-  @include respond-to(mobile) {
-    font-size: 1.375rem; // 22px
-  }
+  letter-spacing: 0em;
 }
 
 // NOTE: Use for all <h3> elements
@@ -78,15 +61,48 @@ NOTE: by default, type elements should not have top margins
 // Tablet: Header / H2;
 // Desktop: Header / H1;
 @mixin heading-h4($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow-bold, bold, 500);
+  @include font-base($font-family-barlow, normal, 800);
   color: $color;
-  font-size: 1.5rem; // 24px
-  // letter-spacing: -0.01em;
-  line-height: 133.1%;
+  font-size: 26px !important;
+  line-height: 39px;
   text-align: $textAlign;
-  @include respond-to(mobile) {
-    font-size: 1.375rem; // 22px
-  }
+  letter-spacing: -0.01em;
+}
+
+@mixin heading-h5($color: $white, $textAlign: left) {
+  @include font-base($font-family-barlow, normal, 600);
+  color: $color;
+  font-size: 40px !important;
+  line-height: 43px;
+  text-align: $textAlign;
+  letter-spacing: -0.01em;
+}
+
+@mixin sub-title($color: $white, $textAlign: left) {
+  @include font-base($font-family-lato, normal, 700);
+  font-size: 25px !important;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: $textAlign;
+  color: $color;
+}
+
+@mixin text-button($color: $white, $textAlign: left) {
+  @include font-base($font-family-lato, normal, 700);
+  font-size: 25px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: $textAlign;
+  color: $color;
+}
+
+@mixin text-content($color: $white, $textAlign: center) {
+  @include font-base($font-family-lato, normal, 500);
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: $textAlign;
+  color: $color;
 }
 
 @mixin text-body($color: $gray-dark, $textAlign: left) {

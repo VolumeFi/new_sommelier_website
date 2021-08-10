@@ -100,8 +100,7 @@
     }
   }
   .launch-button {
-    @include font-base($font-family-lato, normal, bold);
-    font-size: 1.5625rem; // 26px
+    @include text-button();
     background: $white;
     max-width: 19.625rem; // 314px
     height: 4.813rem; // 77px
@@ -150,85 +149,24 @@
   }
   .main-top__left-container {
     display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    margin-top: 2.75rem;
-    @include respond-to(desktop) {
-      // width: 50%;
-      // padding-right: 3.125rem; // 50px
-      div {
-        margin-left: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: left;
-        p.new {
-          font-size: 1.25rem;
-        }
-        h1, p {
-          text-align: left;
-          margin-right: auto;
-          color: $white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 100px;
+    .new {
+      @include text-content();
+    }
+    .cellars {
+      background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-          &.sommelier {
-            font-size: 5rem;
-            color: $white;
-          }
-
-          &.cellars {
-            background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 3.75rem;
-            letter-spacing: 0.06em;
-            margin-top: -25px;
-          }
-        }
-        a {
-          margin-right: auto;
-        }
-      }
-      h1 {
-        // margin-left: 30%;
-      }
-    }
-    @include respond-to(mobile) {
-      // margin-top: 0;
-    }
-    div {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: flex-start;
-      @include respond-to(mobile) {
-        // margin-left: 2.75rem;
-        // margin-right: 2.75rem;
-      }
-      .launch-button {
-        margin-top: 46px;
-        @include respond-to(mobile) {
-          margin-top: 1rem;
-        }
-      }
-    }
-    h1, p {
-      @include font-base($font-family-lato, normal, 600);
-      text-align: left;
-      @include respond-to(tablet) {
-        text-align: left;
-      }
-      @include respond-to(mobile) {
-        text-align: left;
-      }
-    }
-    p.new {
-      text-align: left;
-      color: $white;
-    }
     .launch-button {
-      @include font-base($font-family-lato-bold, bold, 600);
       margin-top: 46px;
+      @include text-button();
       @include respond-to(mobile) {
-        margin-top: 2.125rem;
+        margin-top: 1rem;
       }
     }
   }
@@ -287,24 +225,17 @@
     img {
       width: 14.5rem;
     }
-    h2 {
-      font-size: 5rem;
-      font-weight: bold;
+    h1 {
       margin-top: 49px;
     }
-    p {
-      font-size: 3.125rem;
+    h3 {
       margin-top: 30px;
-      @include font-base($font-family-barlow, bold, 600);
     }
     .add-liquidity-button {
-      @include font-base($font-family-lato-bold, bold, 600);
+      @include text-button();
       text-decoration: none;
-      font-size: 1.5625rem;
-      line-height: 1.5rem;
       padding: 0.94935rem 1.13921875rem;
       border-radius: 10.6327px;
-      color: $white;
       border: 3.22px solid #E323FF;
       margin-top: 60px;
     }
@@ -319,7 +250,6 @@
     align-items: center;
 
     h2 {
-      font-size: 3.125rem;
       color: $text-black;
       span {
         background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
@@ -340,19 +270,11 @@
       padding: 25px;
 
       h4 {
-        @include font-base($font-family-lato, normal, 800);
-        text-align: center;
-        color: $text-black;
-        font-size: 1.5625rem;
-        line-height: 1.875rem;
+        @include heading-h4($text-black, center);
       }
       p {
-        @include font-base($font-family-lato, normal, normal);
+        @include text-content($text-black, center);
         margin-top: 40px;
-        text-align: center;
-        color: $text-black;
-        font-size: 1.25rem;
-        letter-spacing: -0.01em;
       }
     }
   }
@@ -363,11 +285,8 @@
     padding-right: 100px;
 
     h2 {
-      font-size: 3.125rem;
-      font-weight: 800;
-      line-height: 3.375rem;
-      text-align: center;
       margin-bottom: 115px;
+      text-align: center;
     }
 
     .main-usecases__content {
@@ -376,28 +295,29 @@
       &-item {
         flex: 1;
         color: $white;
-        text-align: center;
 
         img {
           max-width: 448px;
+          margin-left: 39px;
+          margin-right: 39px;
         }
 
-        h3 {
-          @include font-base($font-family-lato, normal, 800);
-          font-size: 1.5625rem;
-          font-weight: 800;
-          line-height: 1.875rem;
+        h4 {
           text-align: center;
           margin-top: 74px;
+          display: block;
+          max-width: 358px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         p {
-          @include font-base($font-family-lato, normal, normal);
-          font-size: 1.25rem;
-          font-weight: normal;
-          line-height: 149%;
+          @include text-content();
           text-align: center;
-          margin-top: 35px;
+          display: block;
+          max-width: 358px;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     }
@@ -644,21 +564,16 @@
       align-items: center;
 
       h1 {
-        font-size: 5rem;
         text-align: center;
       }
       p {
-        @include font-base($font-family-lato, normal, 600);
-        font-size: 1.5625rem;
-        line-height: 2rem;
-        color: $white;
+        @include sub-title($white, center);
         margin-top: 50px;
-        text-align: center;
       }
 
       .launch-button {
+        @include text-button();
         margin-top: 48px;
-        line-height: 1.5rem;
       }
     }
   }
@@ -676,19 +591,11 @@
       margin-bottom: 24px;
     }
     &-title {
-      @include font-base($font-family-lato, normal, 800);
-      color: $white;
-      font-size: 1.625rem;
-      font-weight: 800;
-      line-height: 149%;
+      @include heading-h4();
       flex: 1;
     }
     &-description {
-      @include font-base($font-family-lato, normal, 600);
-      color: $white;
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 149%;
+      @include text-content($white, left);
       margin-left: 100px;
       width: 431px;
     }
