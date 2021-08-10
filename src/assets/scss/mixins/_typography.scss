@@ -19,7 +19,7 @@ NOTE: by default, type elements should not have top margins
 // Tablet: Header / H2;
 // Desktop: Header / H1;
 @mixin heading-h1($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow, normal, 700);
+  @include font-base($font-family-barlow-bold, normal, 700);
   color: $color;
   font-size: 80px !important;
   line-height: 20px;
@@ -61,7 +61,7 @@ NOTE: by default, type elements should not have top margins
 // Tablet: Header / H2;
 // Desktop: Header / H1;
 @mixin heading-h4($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow, normal, 800);
+  @include font-base($font-family-lato, normal, 800);
   color: $color;
   font-size: 26px !important;
   line-height: 39px;
