@@ -12,22 +12,26 @@ const Container = styled.div`
   .img-avatar {
     max-width: 10.75rem;
   }
-  h3 {
-    font-family: 'Lato Regular';
-    margin-top: 1.625rem;
+  h5 {
+    font-family: Barlow;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 43px;
+    letter-spacing: 0em;
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: 800;
   }
-  p {
-    font-family: 'Lato Regular';
-    margin-top: 0.625rem;
+  h4 {
+    font-family: Lato;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 39px;
+    letter-spacing: -0.01em;
+    text-align: center;
     background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.625rem;
-    font-weight: 600;
-    line-height: 149%;
   }
   .caption-container {
     div {
@@ -48,8 +52,8 @@ const ProfileNew = ({ data }) => {
     <Container className='profile-container'>
       <img src={data.avatar} className='img-avatar' width='172' />
       <div className='caption-container'>
-        <h3>{data.name}</h3>
-        <p>Co-Founder</p>
+        <h5>{data.name}</h5>
+        <h4>Co-Founder</h4>
         <div>
           <a href={data.twitter} target="_blank"><img src={twIcon} /></a>
           <a href={data.linkedin} target="_blank"><img src={liIcon} /></a>

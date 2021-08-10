@@ -51,12 +51,12 @@
 }
 
 @mixin text-subtitle($color: $gray-dark, $textAlign: left) {
-  @include font-base($font-family-source-light, normal, 400);
+  @include font-base($font-family-lato, normal, 500);
   color: $color;
   text-align: $textAlign;
-  font-size: 1.5rem; // 24px
+  font-size: 1.375rem; // 24px
   letter-spacing: -0.01em;
-  line-height: 149%;
+  line-height: 1.75rem;
   @include respond-to(mobile) {
     font-size: 1.125rem; // 52px
     letter-spacing: -0.01em;

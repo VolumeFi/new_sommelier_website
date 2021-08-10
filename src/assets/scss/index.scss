@@ -23,6 +23,22 @@ h4 {
   @include heading-h4();
 }
 
+h5 {
+  @include heading-h5();
+}
+
+.text-content {
+  @include text-content();
+}
+
+.text-button {
+  @include text-button();
+}
+
+.sub-title {
+  @include sub-title();
+}
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -41,13 +57,12 @@ h4 {
 }
 
 .nav-menu-item {
-  @include font-base($font-family-barlow-bold, bold, 500);
+  @include font-base($font-family-lato, normal, 700);
   color: $white;
-  font-size: 0.938rem; // 15x
-  line-height: 133.1%;
+  font-size: 16px;
+  line-height: 21px;
   text-align: left;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
 }
 
 .nav-container {
