@@ -231,7 +231,7 @@ export default function Main() {
             Sommelier
           </h1>
           <h1 className='d-block cellars'>
-            CELLARS
+            Cellars
           </h1>
           <p className='sub-title mt-3'>Automated Liquidity Management<br/>for Decentralized Finance</p>
           <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
