@@ -123,7 +123,7 @@ export default function AboutUsPage() {
     <div className='mt-5 main-container'>
       <div className='main-what' style={{ backgroundImage: `url(${welcomeBg})`, backgroundSize: 'cover' }}>
         <div className='main-what__left'>
-          <img src={spiral2Img} alt='frame image' />
+          <img src={spiral2Img} alt='frame image' width='100%'/>
         </div>
         <div className='main-what__middle'>
           <h1>What is Sommelier?</h1>
@@ -134,7 +134,7 @@ export default function AboutUsPage() {
           </a>
         </div>
         <div className='main-what__right'>
-          <img src={spiral2Img} alt='frame image' />
+          <img src={spiral2Img} alt='frame image' width='100%'/>
         </div>
       </div>
       <div className='main-feature section-container'>
@@ -149,7 +149,7 @@ export default function AboutUsPage() {
         <h2>Sommelier Team</h2>
         <div className='main-team__content'>
           {teamMembers.map((item, index) => (
-            <div className='main-team__content-member'>
+            <div key={`team-profile-${index}`} className='main-team__content-member profile-container'>
               <ProfileNew data={item} /> 
             </div>
           ))}
