@@ -160,11 +160,11 @@
       background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-top: -25px;
     }
-
     .launch-button {
-      margin-top: 46px;
       @include text-button();
+      margin-top: 41px;
       @include respond-to(mobile) {
         margin-top: 1rem;
       }
@@ -256,25 +256,25 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+      margin-bottom: 115px;
     }
 
   }
   .main-why__content {
-    margin-top: 105px;
     display: flex;
     justify-content: space-between;
     padding-left: 155px;
     padding-right: 155px;
 
     &-item {
-      padding: 25px;
+      padding: 15px 25px;
+      flex: 1;
 
       h4 {
         @include heading-h4($text-black, center);
       }
       p {
         @include text-content($text-black, center);
-        margin-top: 40px;
       }
     }
   }

@@ -19,126 +19,30 @@ import spiral1Img from '@images/spiral-1.png'
 import spiral2Img from '@images/spiral-2.png'
 import coinsImg from '@images/coins.png'
 
-const frameImg = '/images/Frame.png'
 const etheriumImg = '/images/etherium.png'
-const etheriumImg1 = '/images/etherium-1.png'
-const etheriumMobileImg = '/images/img-ether-mobile.png'
-const cosmosImg = '/images/cosmos.png'
-const etherbridgeImg = '/images/ether-bridge.png'
-const secureImg = '/images/secure.png'
-const automatedImg = '/images/automated.png'
+
 // Use Cases
 const imperImg = '/images/impermanent.png'
 const rebalancingImg = '/images/rebalancing.png'
 const lowerImg = '/images/lower-ether.png'
 const greaterImg = '/images/greater.png'
-// Roadmap
-const stickImg = '/images/roadmap-stick1.png'
-const stickMobileImg = '/images/roadmap-stick-mobile.png'
-// About
-const aboutImg = '/images/img-about1.png'
-// Team
-const teamMembers1 = [
-  {
-    name: 'Zaki Manian',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-zaki.png',
-    twitter: 'https://twitter.com/zmanian',
-    linkedin: 'https://www.linkedin.com/in/zmanian'
-  },
-  {
-    name: 'Jack Zampolin',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-jack.png',
-    twitter: 'https://twitter.com/jack_zampolin',
-    linkedin: 'https://www.linkedin.com/in/jackzampolin/'
-  },
-  {
-    name: 'Kevin Kennis',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-kevin.png',
-    twitter: 'https://twitter.com/kevinvkennis',
-    linkedin: 'https://www.linkedin.com/in/kkennis/'
-  }
-]
-const teamMembers2 = [
-  {
-    name: 'Federico Kunze',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-federico.png',
-    twitter: 'https://twitter.com/fekunze',
-    linkedin: 'https://www.linkedin.com/in/fekunze/'
-  },
-  {
-    name: 'Tony Arcieri',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-tony.png',
-    twitter: 'https://twitter.com/bascule',
-    linkedin: 'https://www.linkedin.com/in/tarcieri'
-  },
-  {
-    name: 'Lucky Odisetti',
-    role: 'Product Lead',
-    avatar: '/images/avatar/avatar-lucky.png',
-    twitter: 'https://twitter.com/luckyOdiseti',
-    linkedin: 'https://www.linkedin.com/in/lucky-odisetti-701b5437'
-  },
-  {
-    name: 'Justin Kilpatrick',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-justin.png',
-    twitter: 'https://twitter.com/ttk314',
-    linkedin: 'https://www.linkedin.com/in/kilpatrickjustin/'
-  },
-  {
-    name: 'Deborah Simpier',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-deborah.png',
-    twitter: 'https://twitter.com/DeborahSimpier',
-    linkedin: 'https://www.linkedin.com/in/deborah-simpier-a88063169/'
-  },
-  {
-    name: 'Jehan Tremback',
-    role: 'Core Developer',
-    avatar: '/images/avatar/avatar-jehan.png',
-    twitter: 'https://twitter.com/JTremback',
-    linkedin: 'https://www.linkedin.com/in/jehantremback/'
-  },
-  {
-    name: 'Kristi Põldsam',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-kristi.png',
-    twitter: 'https://twitter.com/kpoldsam',
-    linkedin: 'https://www.linkedin.com/in/poldsam/'
-  },
-  {
-    name: 'Shella Stephens',
-    role: 'Co-Founder',
-    avatar: '/images/avatar/avatar-shella.png',
-    twitter: 'https://twitter.com/shella',
-    linkedin: 'https://www.linkedin.com/in/shellastephens/'
-  },
-]
+
 const whyData = [
   {
-    img: cosmosImg,
-    title: 'Cosmos Stargate SDK',
-    description: 'Modular and robust protocol with Tendermint Consensus delivers world class and tested protocol layer',
+    title: 'Liquidity Provider Management Tools',
+    description: 'Sommelier Cellars are focused on Uniswap v3 which has high degree of capital efficiency in the Range Order structure.',
   },
   {
-    img: etherbridgeImg,
     title: 'Bi-Directional Ethereum Bridge',
-    description: 'Automatically rebalance your portfolio when pool performance changes such that Impermanent and unrealized losses require a change in strategy',
+    description: 'Ethereum transactions are managed by the most functional bridge optimized for extending Ethereum features for Liquidity Providers.',
   },
   {
-    img: secureImg,
-    title: 'Secure',
-    description: 'Transactions are managed by the Sommelier validator set with decentralized governance. Sommelier cannot steal user funds',
+    title: 'Data Driven Strategies',
+    description: 'Sommelier validators leverage optimal liquidity management strategies based on blockchain transaction data and advanced price prediction models.',
   },
   {
-    img: automatedImg,
-    title: 'Automated',
-    description: 'Automated signature management for Ethereum transactions enable automated DeFi trading for increased liquidity momentum and yield capture',
+    title: 'Non-Custodial Liquidity Oracle',
+    description: 'Sommelier transactions are managed by the Sommelier blockchain validator set with decentralized governance. Sommelier itself does not control user funds.',
   },
 ]
 const usecasesData = [
@@ -163,20 +67,6 @@ const usecasesData = [
     description: 'Native transaction batching and roll-ups deliver greater liquidity momentum to capture onchain yield on the Ethereum blockchain',
   },
 ]
-
-const teamMembers3 = [...teamMembers1, ...teamMembers2]
-// Investors
-const cygnilabsImg = '/images/investors/ico-cygnilabs.png'
-const standardImg = '/images/investors/ico-standard.png'
-const multicoinImg = '/images/investors/ico-multicoin.png'
-const alamedaImg = '/images/investors/ico-alameda.png'
-
-const sliderSettings = {
-  dots: true,
-  duration: 100,
-  dots: false,
-  centerMode: true
-}
 
 setTimeout(function(){
   var href = window.location.href;
@@ -218,10 +108,6 @@ export default function Main() {
     getWindowDimensions()
   );
 
-  const teamItemWidth = 250
-  const carsouselWidth = teamItemWidth * teamMembers3.length
-  const carsouselUsecasesWidth = windowDimensions.width * usecasesData.length
-
   return (
     <div className='mt-5 main-container'>
       <div className='main-top'>
@@ -231,7 +117,7 @@ export default function Main() {
             Sommelier
           </h1>
           <h1 className='d-block cellars'>
-            CELLARS
+            Cellars
           </h1>
           <p className='sub-title mt-3'>Automated Liquidity Management<br/>for Decentralized Finance</p>
           <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
@@ -257,22 +143,18 @@ export default function Main() {
           Why Sommelier <span>Cellars</span>?
         </h2>
         <div className='main-why__content'>
-          <div className='main-why__content-item'>
-            <h4>Liquidity Provider Management Tools</h4>
-            <p>Sommelier Cellars are focused on Uniswap v3 which has high degree of capital efficiency in the Range Order structure.</p>
-          </div>
-          <div className='main-why__content-item'>
-            <h4>Bi-Directional Ethereum Bridge</h4>
-            <p>Ethereum transactions are managed by the most functional bridge optimized for extending Ethereum features for Liquidity Providers.</p>
-          </div>
-          <div className='main-why__content-item'>
-            <h4>Data-driven management strategies</h4>
-            <p>Sommelier validators leverage optimal liquidity management strategies based on blockchain transaction data and advanced price prediction models.</p>
-          </div>
-          <div className='main-why__content-item'>
-            <h4>Non-Custodial Liquidity Oracle</h4>
-            <p>Sommelier transactions are managed by the Sommelier blockchain validator set with decentralized governance. Sommelier itself does not control user funds.</p>
-          </div>
+          {whyData.map((data, index) => (
+            <div className='main-why__content-item' key={`why-title-${index}`}>
+              <h4>{data.title}</h4>
+            </div>
+          ))}
+        </div>
+        <div className='main-why__content'>
+          {whyData.map((data, index) => (
+            <div className='main-why__content-item' key={`why-description-${index}`}>
+              <p>{data.description}</p>
+            </div>
+          ))}
         </div>
       </div>
       <a name="usecases" id='usecases'></a>
