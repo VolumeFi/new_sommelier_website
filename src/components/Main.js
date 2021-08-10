@@ -226,20 +226,18 @@ export default function Main() {
     <div className='mt-5 main-container'>
       <div className='main-top'>
         <div className='main-top__left-container'>
-          <div>
-            <p className='new'>NEW</p>
-            <h1 className='d-block sommelier'>
-              Sommelier
-            </h1>
-            <h1 className='d-block cellars'>
-              CELLARS
-            </h1>
-            <p className='caption-text-small mt-3'>Automated Liquidity Management<br/>for Decentralized Finance</p>
-            <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
-              <span>Add Liquidity</span>
-              <img src={coinsImg} alt='frame image' className='mr-2'/>
-            </a>
-          </div>
+          <p className='text-content'>NEW</p>
+          <h1 className='d-block sommelier'>
+            Sommelier
+          </h1>
+          <h1 className='d-block cellars'>
+            CELLARS
+          </h1>
+          <p className='sub-title mt-3'>Automated Liquidity Management<br/>for Decentralized Finance</p>
+          <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
+            <span>Add Liquidity</span>
+            <img src={coinsImg} alt='frame image' className='mr-2'/>
+          </a>
         </div>
         <div className='main-top__right-container'>
           <img src={spiral2Img} alt='frame image' />
@@ -249,8 +247,8 @@ export default function Main() {
 
       <div className="main-welcome" style={{ backgroundImage: `url(${welcomeBg})`, backgroundSize: 'cover' }}>
         <img src={etheriumImg} alt='frame image' />
-        <h2>Welcome to Sommelier</h2>
-        <p>The new coprocessor for the Ethereum VM</p>
+        <h1>Welcome to Sommelier</h1>
+        <h3>The new coprocessor for the Ethereum VM</h3>
         <a href='#' className='add-liquidity-button'>Add Liquidity</a>
       </div>
 
@@ -284,17 +282,17 @@ export default function Main() {
         </h2>
         <div className='main-usecases__content'>
           <div className='main-usecases__content-item'>
-            <h3>Decentralized Portfolio<br/>Management</h3>
-            <p>Validator set portfolio management with<br/>full user funds control.</p>
+            <h4>Decentralized Portfolio Management</h4>
+            <p>Validator set portfolio management with full user funds control.</p>
           </div>
           <div className='main-usecases__content-item'>
             <img src={spiral1Img} />
-            <h3>Compounding Fees Across<br/>AMMs and Networks</h3>
-            <p>Automatically compounding fees without<br/>need for active intervention.</p>
+            <h4>Compounding Fees Across AMMs and Networks</h4>
+            <p>Automatically compounding fees without need for active intervention.</p>
           </div>
           <div className='main-usecases__content-item'>
-            <h3>Automated Portfolio<br/>Rebalancing</h3>
-            <p>Automatically rebalance portfolio to<br/>focus on high yield Liquidity Provider<br/>opportunities and exit lower yielding<br/>opportunities.</p>
+            <h4>Automated Portfolio Rebalancing</h4>
+            <p>Automatically rebalance portfolio to focus on high yield Liquidity Provider opportunities and exit lower yielding opportunities.</p>
           </div>
         </div>
       </div>
