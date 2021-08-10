@@ -33,6 +33,7 @@ const Footer = () => {
               <a href='/blog/' className='footer-menu-item'>Blog</a>
               <a href='/resources' className='footer-menu-item'>Resource</a>
             </div>
+            <p className='copyright text-left'>Copyright © 2021 Sommelier</p>
           </div>
           <div className='footer-menu-social'>
             <h4>Social</h4>
@@ -52,11 +53,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className='copyright'>Copyright © 2021 Sommelier</p>
-        <p className='description'>
+        <p className='description desktop-visible'>
           Sommelier is alpha software. Sommelier is non-custodial and has no warranties. We also do not endorse any pools that we share on our channels. Pools may be compromised and things on Sommelier break all the time and you may lose your money. We are not giving you investment advice with this update and Sommelier does not control your funds. Again, all our software is alpha and undergoing daily updates and things can break all the time.
         </p>
       </div>
+      <p className='description mobile-visible' style={{ padding: '0px 50px 50px'}}>
+        Sommelier is alpha software. Sommelier is non-custodial and has no warranties. We also do not endorse any pools that we share on our channels. Pools may be compromised and things on Sommelier break all the time and you may lose your money. We are not giving you investment advice with this update and Sommelier does not control your funds. Again, all our software is alpha and undergoing daily updates and things can break all the time.
+      </p>
     </footer>
   )
 }
