@@ -208,6 +208,7 @@ footer {
       margin: 2.75rem;
       flex-direction: column;
       justify-content: center;
+      padding: 48px 57px;
     }
     .footer-menu-wrapper {
       display: flex; 
@@ -223,6 +224,7 @@ footer {
     .footer-menu-sommelier {
       flex: 1;
       h4 {
+        text-align: left;
         color: $text-black;
         font-size: 1rem;
         font-weight: 800;
@@ -230,6 +232,10 @@ footer {
       .footer-menu-sommelier-wrapper {
         display: flex;
         margin-top: 40px;
+        flex-flow: row wrap;
+        @include respond-to(mobile) {
+          margin-top: 15px;
+        }
       }
       .footer-menu-item {
         @include font-base($font-family-lato, normal, bold);
@@ -246,15 +252,24 @@ footer {
         color: $text-black;
         font-size: 1rem;
         font-weight: 800;
+        text-align: left;
       }
       .footer-menu-social-wrapper {
         display: flex;
         margin-top: 40px;
+        flex-flow: wrap;
+        @include respond-to(mobile) {
+          margin-top: 15px;
+        }
       }
       .footer-menu-item {
         img {
           height: 41px;
           margin-right: 18px;
+          margin-bottom: 5px;
+          @include respond-to(mobile) {
+            height: 22px;
+          }
         }
       }
     }
@@ -278,6 +293,9 @@ footer {
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    @include respond-to(mobile) {
+      margin-top: 0px;
+    }
   }
 }
 

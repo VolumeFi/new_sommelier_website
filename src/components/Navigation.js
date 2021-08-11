@@ -72,6 +72,11 @@ const Nav = ({ settings, lang, pathname }) => {
                     {`Resource`}
                   </Link>
                 </li>
+                <li key={7} >
+                  <Link to={`/events/`} className='nav-menu-item'>
+                    {`Event`}
+                  </Link>
+                </li>
 
                 <li key={999} className='d-flex align-items-center launch-button-inverse'>
                   <a href="https://app.sommelier.finance" className='nav-menu-item nav-menu-item--launch' target="_blank">
