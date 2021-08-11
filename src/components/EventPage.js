@@ -31,7 +31,7 @@ const EventPage = ({ blok, title, history, join_community }) => {
       a {  color: white; }
     `}}/>
       <br/><br/><br/>
-      <div class="container">
+      <div className="container">
       <h1><a href="/events">Upcoming Events</a><span  style={{float: 'right'}}><a href="/events/history">PAST EVENTS</a></span></h1>
 
       <br/><br/>
