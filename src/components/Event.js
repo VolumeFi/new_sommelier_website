@@ -84,22 +84,22 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
   }
 
   if (start_date != "") {
-    event_dates = <h6 class="card-subtitle">Event Date: &nbsp;&nbsp;<span style={{color: 'white'}}>{start_date}</span></h6>;
+    event_dates = <h6 className="card-subtitle">Event Date: &nbsp;&nbsp;<span style={{color: 'white'}}>{start_date}</span></h6>;
     invite_event.start = event.start_date;
-    event_time = <h6 class="card-subtitle">Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)}</span></h6>;
+    event_time = <h6 className="card-subtitle">Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)}</span></h6>;
   }
 
   if (event.start_date != "" && event.end_date != "") {
     if (start_time != end_time) {
-      event_time = <h6 class="card-subtitle">Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)} to {tConvert(end_time)}</span></h6>;
+      event_time = <h6 className="card-subtitle">Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)} to {tConvert(end_time)}</span></h6>;
     }
   }
 
   if (event.location != "") {
     if (validUrl.isUri(event.location)){
-        location = <h6 class="card-subtitle">Location: &nbsp;&nbsp;<a href={event.location} class="card-link">{event.location}</a></h6>;
+        location = <h6 className="card-subtitle">Location: &nbsp;&nbsp;<a href={event.location} className="card-link">{event.location}</a></h6>;
     } else {
-        location = <h6 class="card-subtitle">Location: &nbsp;&nbsp;{event.location}</h6>;
+        location = <h6 className="card-subtitle">Location: &nbsp;&nbsp;{event.location}</h6>;
     }
   }
 
@@ -109,17 +109,17 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
   if (!isEmpty(event.event_image.filename)) {
     column_size = "col-md-6";
     img_style = "width:100%";
-    img_div = <div class="col-md-6"><img src={event.event_image.filename} style={{width: 100 + '%'}} /><br/><br/></div>;
+    img_div = <div className="col-md-6"><img src={event.event_image.filename} style={{width: 100 + '%'}} /><br/><br/></div>;
   } else {
     column_size = "col-12";
   }
 
   let add_to_calc = "";
   if (!history) {
-    add_to_calc = <div title="Add to Calendar" class="addeventatc">Register for Event<span class="start">{ s_date.toLocaleString() }</span><span class="end">{ e_date.toLocaleString() }</span><span class="title">{ event.title }</span><span class="description">{ event.description.content[0].content[0].text }</span><span class="location">{ event.location }</span></div>;
+    add_to_calc = <div title="Add to Calendar" className="addeventatc">Register for Event<span className="start">{ s_date.toLocaleString() }</span><span className="end">{ e_date.toLocaleString() }</span><span className="title">{ event.title }</span><span className="description">{ event.description.content[0].content[0].text }</span><span className="location">{ event.location }</span></div>;
   }
 
-  let join_community_area =  <a href="https://t.me/getsomm" class="btn  btn-lg active" style={{background: '#d9137b', borderColor:'d9137b', fontWeight: "600", borderRadius: '100px', fontFamily: "'Poppins', sans-serif"}} target="_blank">JOIN OUR COMMUNITY</a>;
+  let join_community_area =  <a href="https://t.me/getsomm" className="btn  btn-lg active" style={{background: '#d9137b', borderColor:'d9137b', fontWeight: "600", borderRadius: '100px', fontFamily: "'Poppins', sans-serif"}} target="_blank">JOIN OUR COMMUNITY</a>;
   let div_id = uid;
   let join_us = "";
   if (!history) {
@@ -127,14 +127,14 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
   }
   return (
     <div>
-    <div class='row'>
-      <div class='col'>
-      <div class="card" >
-      <div class="card-body">
+    <div className='row'>
+      <div className='col'>
+      <div className="card" >
+      <div className="card-body">
 
-            <h5 class="card-title"><a href={ '/' + slug} style={{ fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif", fontWeight: "bold", fontSize: "1.85028rem" }}>{ event.title }</a></h5>
-            <div class='row'>
-              <div class='col-6'>
+            <h5 className="card-title"><a href={ '/' + slug} style={{ fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif", fontWeight: "bold", fontSize: "1.85028rem" }}>{ event.title }</a></h5>
+            <div className='row'>
+              <div className='col-6'>
                 {event_dates}
                 {event_time}
                 {location}
@@ -143,25 +143,25 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
                 <br/>
                 <br/>
               </div>
-              <div class='col-6'>
+              <div className='col-6'>
               <br/>
                 {join_us}
                 <h1 id={div_id} style={{textAlign: 'center'}}></h1>
               </div>
             </div>
 
-            <div class='row'>
+            <div className='row'>
             {img_div}
 
-              <div class={column_size}>
-            <p class="card-text">{render(event.description, {
+              <div className={column_size}>
+            <p className="card-text">{render(event.description, {
               nodeResolvers: {
                 [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', width: '100%'}}/>
               },
               blokResolvers: {
                 ['YouTube-blogpost']: (props) => (
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src={ "https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')  }></iframe>
+                  <div className="embed-responsive embed-responsive-16by9">
+                    <iframe className="embed-responsive-item" src={ "https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')  }></iframe>
                   </div>
                   )
               }
