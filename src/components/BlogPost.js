@@ -118,8 +118,8 @@ console.log('***morePosts**');
                     },
                     blokResolvers: {
                       ['YouTube-blogpost']: (props) => (
-                        <div class="embed-responsive embed-responsive-16by9">
-                          <iframe class="embed-responsive-item" src={ "https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')  }></iframe>
+                        <div className="embed-responsive embed-responsive-16by9">
+                          <iframe className="embed-responsive-item" src={ "https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')  }></iframe>
                         </div>
                         )
                     }

@@ -44,21 +44,21 @@ export default function Template({
           background-color: #555;
         }
       `}}/>
-      <a class="btn btn-primary display-4" href="#top" id="myBtn">⇧ Back To Top ⇧</a>
-      <div class="container" id="top">
-        <div class="row">
-          <div class="col">
+      <a className="btn btn-primary display-4" href="#top" id="myBtn">⇧ Back To Top ⇧</a>
+      <div className="container" id="top">
+        <div className="row">
+          <div className="col">
           <br/><br/><br/>
             <div className="md-post">
               <h1><center>{frontmatter.title}</center></h1>
-              <div class="row">
-                <div class="col-4">
+              <div className="row">
+                <div className="col-4">
                 <h3>Table of Contents</h3>
                   <div
                     dangerouslySetInnerHTML={{ __html: toc }}
                   />
                 </div>
-                <div class="col-8">
+                <div className="col-8">
                   <div
                     dangerouslySetInnerHTML={{ __html: html }}
                   />
