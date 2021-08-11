@@ -12,7 +12,7 @@ const ResourcesPage = ({ blok }) => {
   return (
     <SbEditable content={blok} key={blok._uid}>
       <br /><br /><br />
-      <div class="container resource-container">
+      <div className="container resource-container">
         <h1>Resources</h1>
         <br /><br />
         {
