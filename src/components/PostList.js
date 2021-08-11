@@ -94,28 +94,43 @@ const PostsList = ({ blok }) => {
         </div>
         {(morePosts.length > 0) && (
         <div className='container__more-section'>
-          <p>MORE ARTICLES</p>
+          <p>Latest Articles</p>
           <div className='container__more-section__content row'>
 
               {morePosts.reverse().map((post, index) => {
                 return (
-                  <div className='col-12 col-md-4' style={{ border:  '0px', padding: '0px', margin: '0px'}}>
-                  <ul style={{width: '100%', border:  '0px', padding: '0px', margin: '0px'}}>
-                  <li key={post.name} style={{width:  '100%', border:  '0px', padding: '0px', margin: '0px'}}>
-                    <div className='more-li__content'>
-                      <a className='container__more-section__title' href='#' onClick={(e) => {
+                  <div style={{ width: '100%'}}>
+                    <a className='container__more-section__content-row' href='#' onClick={(e) => {
                         e.preventDefault()
                         navigate(`/${post.full_slug}`)
-                      }}>
-                        <img src={post.content.image}></img>
-                        <div className='mt-2'>
-                          {post.content.title}
-                        </div>
-                      </a>
-                    </div>
-                  </li>
-                  </ul>
+                    }}>
+                      <img src={post.content.image}></img>
+                      <div className='mt-2 content'>
+                        <div className='title'>{post.content.title}</div>
+                        <div className='intro'>{post.content.intro}</div>
+                      </div>
+                    </a>
                   </div>
+                  // <div className='col-12' style={{ border:  '0px', padding: '0px', margin: '0px'}}>
+                  // <ul style={{width: '100%', border:  '0px', padding: '0px', margin: '0px'}}>
+                  // <li key={post.name} style={{width:  '100%', border:  '0px', padding: '0px', margin: '0px'}}>
+                  //   <div className='more-li__content'>
+                  //     <a className='container__more-section__title' href='#' onClick={(e) => {
+                  //       e.preventDefault()
+                  //       navigate(`/${post.full_slug}`)
+                  //     }}>
+                  //       <img src={post.content.image}></img>
+                  //       <div className='mt-2'>
+                  //         {post.content.title}
+                  //       </div>
+                  //       <div className='mt-2'>
+                  //         {post.content.intro}
+                  //       </div>
+                  //     </a>
+                  //   </div>
+                  // </li>
+                  // </ul>
+                  // </div>
                 )
               })}
 
