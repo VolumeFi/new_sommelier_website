@@ -31,7 +31,8 @@ const Footer = () => {
               <a href='/' className='footer-menu-item'>Home</a>
               <a href='/about-us' className='footer-menu-item'>About</a>
               <a href='/blog/' className='footer-menu-item'>Blog</a>
-              <a href='/resources' className='footer-menu-item'>Resource</a>
+              <a href='/resources/' className='footer-menu-item'>Resource</a>
+              <a href='/events/' className='footer-menu-item'>Event</a>
             </div>
             <p className='copyright text-left'>Copyright © 2021 Sommelier</p>
           </div>

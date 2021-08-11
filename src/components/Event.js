@@ -2,6 +2,9 @@ import React from "react"
 import SbEditable from "storyblok-react"
 import { render, NODE_IMAGE } from "storyblok-rich-text-react-renderer"
 import { google, outlook, office365, yahoo, ics } from "calendar-link";
+
+import telegramColorImg from '@images/social/telegram-color.png';
+
 var validUrl = require('valid-url');
 
 function tConvert(time) {
@@ -84,22 +87,22 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
   }
 
   if (start_date != "") {
-    event_dates = <h6 className="card-subtitle">Event Date: &nbsp;&nbsp;<span style={{color: 'white'}}>{start_date}</span></h6>;
+    event_dates = <h6>Event Date: &nbsp;&nbsp;<span style={{color: 'white'}}>{start_date}</span></h6>;
     invite_event.start = event.start_date;
-    event_time = <h6 className="card-subtitle">Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)}</span></h6>;
+    event_time = <h6>Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)}</span></h6>;
   }
 
   if (event.start_date != "" && event.end_date != "") {
     if (start_time != end_time) {
-      event_time = <h6 className="card-subtitle">Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)} to {tConvert(end_time)}</span></h6>;
+      event_time = <h6>Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)} to {tConvert(end_time)}</span></h6>;
     }
   }
 
   if (event.location != "") {
     if (validUrl.isUri(event.location)){
-        location = <h6 className="card-subtitle">Location: &nbsp;&nbsp;<a href={event.location} className="card-link">{event.location}</a></h6>;
+        location = <h6>Location: &nbsp;&nbsp;<a href={event.location} className="card-link">{event.location}</a></h6>;
     } else {
-        location = <h6 className="card-subtitle">Location: &nbsp;&nbsp;{event.location}</h6>;
+        location = <h6>Location: &nbsp;&nbsp;{event.location}</h6>;
     }
   }
 
@@ -119,42 +122,43 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
     add_to_calc = <div title="Add to Calendar" className="addeventatc">Register for Event<span className="start">{ s_date.toLocaleString() }</span><span className="end">{ e_date.toLocaleString() }</span><span className="title">{ event.title }</span><span className="description">{ event.description.content[0].content[0].text }</span><span className="location">{ event.location }</span></div>;
   }
 
-  let join_community_area =  <a href="https://t.me/getsomm" className="btn  btn-lg active" style={{background: '#d9137b', borderColor:'d9137b', fontWeight: "600", borderRadius: '100px', fontFamily: "'Poppins', sans-serif"}} target="_blank">JOIN OUR COMMUNITY</a>;
-  let div_id = uid;
-  let join_us = "";
-  if (!history) {
-    join_us = <h3 style={{textAlign: 'center'}}> JOIN US IN</h3>;
-  }
+  // let join_us = "";
+  // if (!history) {
+  //   join_us = <h3 style={{textAlign: 'center'}}> JOIN US IN</h3>;
+  // }
+
   return (
-    <div>
-    <div className='row'>
-      <div className='col'>
-      <div className="card" >
-      <div className="card-body">
-
-            <h5 className="card-title"><a href={ '/' + slug} style={{ fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif", fontWeight: "bold", fontSize: "1.85028rem" }}>{ event.title }</a></h5>
-            <div className='row'>
-              <div className='col-6'>
-                {event_dates}
-                {event_time}
-                {location}
-                <br/>
-                {add_to_calc}
-                <br/>
-                <br/>
-              </div>
-              <div className='col-6'>
-              <br/>
-                {join_us}
-                <h1 id={div_id} style={{textAlign: 'center'}}></h1>
-              </div>
-            </div>
-
-            <div className='row'>
-            {img_div}
-
-              <div className={column_size}>
-            <p className="card-text">{render(event.description, {
+    <div className='event-item'>
+      <div className='event-item__left'>
+        <h2>{event.title}</h2>
+        <div className='event-item__divider'></div>
+        <div className='event-detail'>
+          {event_dates}
+        </div>
+        <div className='event-detail'>
+          {event_time}
+        </div>
+        <div className='event-detail'>
+          {location}
+        </div>
+        {!isEmpty(event.event_image.filename) && (
+          <img src={event.event_image.filename} className='event-image' />
+        )}
+      </div>
+      <div className='event-item__right'>
+        <div className='event-register'>
+          <div className='event-action'>
+            <a className='event-action-register' target="_blank">
+              Register for Event
+            </a>
+            <a className='event-action-join' href="https://t.me/getsomm" target="_blank">
+              <span>Join Our Community</span>
+              <img src={telegramColorImg} />
+            </a>
+          </div>
+        </div>
+        <div className="event-intro">
+          {render(event.description, {
               nodeResolvers: {
                 [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', width: '100%'}}/>
               },
@@ -165,18 +169,9 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
                   </div>
                   )
               }
-            })}</p><br/>
-
-            <center>{join_community_area}</center>
-
-
-          </div>
+          })}
         </div>
       </div>
-      </div>
-      </div>
-    </div>
-    <br/><br/>
     </div>
   )
 }
