@@ -38,54 +38,36 @@ const Resource = ({ blok }) => {
     }
   }
 
-
-  let img_div = "";
-  let img_style = "";
-
-  if (!!event.image.filename) {
-    column_size = "col-6";
-    img_style = "width:100%";
-    img_div = <div className="col-6"><img src={event.image.filename} style={{ width: 100 + '%' }} /></div>;
-  } else {
-    column_size = "col-12";
-  }
-
-  console.log(event.image.filename);
   return (
-    <div>
-      <div className='row'>
-        <div className='col'>
-          <div className="card" >
-            <div className="card-body resource-card">
-              <h1>{event.title}</h1>
-              <div className='content'>
-                {event.image.filename && (
-                  <img src={event.image.filename}/>
-                )}
-                <div className='intro'>
-                  <p className="card-text">{render(event.description, {
-                    nodeResolvers: {
-                      [NODE_IMAGE]: (children, props) => <img {...props} style={{ borderRadius: '0px', width: '100%' }} />
-                    },
-                    blokResolvers: {
-                      ['YouTube-blogpost']: (props) => (
-                        <div className="embed-responsive embed-responsive-16by9">
-                          <iframe className="embed-responsive-item" src={"https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')}></iframe>
-                        </div>
-                      )
-                    }
-                  })}</p>
-                  <a className='read-more-button' href={event.location} target="_blank">
-                    Read now
-                    <img src={leftArrowImg} />
-                  </a>
+    <div className='resource-item'>
+      <div className='resource-item__header'>
+        <h2>{event.title}</h2>
+      </div>
+      <div className='resource-item__divider'>
+      </div>
+      <div className='resource-item__body'>
+        {event.image.filename && (
+          <img className='resource-image' src={event.image.filename}/>
+        )}
+        <div className='resource-content'>
+          <div className="resource-content-intro">{render(event.description, {
+            nodeResolvers: {
+              [NODE_IMAGE]: (children, props) => <img {...props} style={{ borderRadius: '0px', width: '100%' }} />
+            },
+            blokResolvers: {
+              ['YouTube-blogpost']: (props) => (
+                <div className="embed-responsive embed-responsive-16by9">
+                  <iframe className="embed-responsive-item" src={"https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')}></iframe>
                 </div>
-              </div>
-            </div>
-          </div>
+              )
+            }
+          })}</div>
+          <a className='read-more-button' href={event.location} target="_blank">
+            Read now
+            <img src={leftArrowImg} />
+          </a>
         </div>
       </div>
-      <br /><br />
     </div>
   )
 }
