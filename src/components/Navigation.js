@@ -67,6 +67,11 @@ const Nav = ({ settings, lang, pathname }) => {
                     {`Blog`}
                   </Link>
                 </li>
+                {/* <li key={6} >
+                  <Link to={`/resources/`} className='nav-menu-item'>
+                    {`Resource`}
+                  </Link>
+                </li> */}
 
                 <li key={999} className='d-flex align-items-center launch-button-inverse'>
                   <a href="" className='nav-menu-item nav-menu-item--launch' target="_blank">
