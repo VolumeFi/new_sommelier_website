@@ -91,11 +91,17 @@ export default function Main() {
     getWindowDimensions()
   );
 
+  const cellBoardStyle= {
+    backgroundImage: `url(${spiral2Img})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+    backgroundSize: 'contain'
+  }
+
   return (
     <div className='mt-5 main-container'>
       <div className='main-top'>
         <div className='main-top__left-container'>
-          <p className='text-content'>NEW</p>
           <h1 className='d-block sommelier'>
             Sommelier
           </h1>
@@ -105,11 +111,9 @@ export default function Main() {
           <p className='sub-title mt-3'>Automated Liquidity Management<br/>for Decentralized Finance</p>
           <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
             <span>Add Liquidity</span>
-            <img src={coinsImg} alt='frame image' className='mr-2'/>
           </a>
         </div>
-        <div className='main-top__right-container'>
-          <img src={spiral2Img} alt='frame image' />
+        <div className='main-top__right-container' style={cellBoardStyle}>
         </div>
       </div>
       <a name="features" id='features'></a>
@@ -124,7 +128,7 @@ export default function Main() {
 
         <div className='main-why'>
           <h2>
-            Why Sommelier <span>Cellars</span>?
+            Why Sommelier Cellars?
           </h2>
           <div className='main-why__content'>
             {whyData.map((data, index) => (
@@ -165,17 +169,12 @@ export default function Main() {
 
       <div className='main-cellar'>
         <div className='main-cellar__left-container'>
-          <p className='text-content'>NEW</p>
           <h1 className='d-block sommelier'>
-            Sommelier
+            Highlighted<br/>Cellars
           </h1>
-          <h2 className='d-block cellars'>
-            Cellars
-          </h2>
           <p className='sub-title mt-3'>Check out the Sommelier Blockchain Explorer for other Cellars and performance.</p>
           <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
             <span>Add Liquidity</span>
-            <img src={coinsWhiteImg} alt='frame image' className='mr-2'/>
           </a>
         </div>
         <div className='main-cellar__right-container'>
@@ -195,14 +194,14 @@ export default function Main() {
               </div>
             </div>
             <div className='cellar-item__body'>
-              <p>Today's Cellar Performance</p>
-              <span>Past 24 hrs</span>
+              <p>Past Cellar Performance</p>
+              <span>Past 7d/ 24hrs</span>
               <div className='cellar-pool-detail'>
                 <div className='cellar-pool-detail-title'>
-                  24h APY
+                  7d Pool Earnings
                 </div>
                 <div className='cellar-pool-detail-value'>
-                  2.3%
+                  $1M
                 </div>
               </div>
               <div className='cellar-pool-detail'>
@@ -218,7 +217,6 @@ export default function Main() {
               <a href='https://app.sommelier.finance/' target='_blank' className='add-liquidity-button'>Add Liquidity</a>
             </div>
           </div>
-
 
           <div className='cellar-item'>
             <div className='cellar-item__header'>
@@ -236,14 +234,14 @@ export default function Main() {
               </div>
             </div>
             <div className='cellar-item__body'>
-              <p>Today's Cellar Performance</p>
-              <span>Past 24 hrs</span>
+              <p>Past Cellar Performance</p>
+              <span>Past 7d/ 24hrs</span>
               <div className='cellar-pool-detail'>
                 <div className='cellar-pool-detail-title'>
-                  24h APY
+                  7d Pool Earnings
                 </div>
                 <div className='cellar-pool-detail-value'>
-                  2.3%
+                  $1M
                 </div>
               </div>
               <div className='cellar-pool-detail'>
