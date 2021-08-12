@@ -14,7 +14,7 @@ const ProfileNew = ({ data }) => {
       <img src={data.avatar} className='img-avatar' width='172' />
       <div className='caption-container'>
         <h5>{data.name}</h5>
-        <h4>Co-Founder</h4>
+        <h4>{data.role}</h4>
         <div>
           <a href={data.twitter} target="_blank"><img src={twIcon} /></a>
           <a href={data.linkedin} target="_blank"><img src={liIcon} /></a>

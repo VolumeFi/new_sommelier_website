@@ -55,20 +55,20 @@ const teamMembers = [
     twitter: 'https://twitter.com/bascule',
     linkedin: 'https://www.linkedin.com/in/tarcieri'
   },
-  {
-    name: 'Justin Kilpatrick',
-    role: 'Co-Founder',
-    avatar: photoJustin,
-    twitter: 'https://twitter.com/ttk314',
-    linkedin: 'https://www.linkedin.com/in/kilpatrickjustin/'
-  },
-  {
-    name: 'Deborah Simpier',
-    role: 'Co-Founder',
-    avatar: photoDeborah,
-    twitter: 'https://twitter.com/DeborahSimpier',
-    linkedin: 'https://www.linkedin.com/in/deborah-simpier-a88063169/'
-  },
+  // {
+  //   name: 'Justin Kilpatrick',
+  //   role: 'Co-Founder',
+  //   avatar: photoJustin,
+  //   twitter: 'https://twitter.com/ttk314',
+  //   linkedin: 'https://www.linkedin.com/in/kilpatrickjustin/'
+  // },
+  // {
+  //   name: 'Deborah Simpier',
+  //   role: 'Co-Founder',
+  //   avatar: photoDeborah,
+  //   twitter: 'https://twitter.com/DeborahSimpier',
+  //   linkedin: 'https://www.linkedin.com/in/deborah-simpier-a88063169/'
+  // },
   {
     name: 'Lucky Odisetti',
     role: 'Product Lead',
