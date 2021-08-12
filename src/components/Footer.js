@@ -1,10 +1,10 @@
 import React from "react"
 import SbEditable from "storyblok-react"
 
-import cygnilabsImg from '@images/investors/ico-cygnilabs.png'
-import standardImg from '@images/investors/ico-standard.png'
-import multicoinImg from '@images/investors/ico-multicoin.png'
-import alamedaImg from '@images/investors/ico-alameda.png'
+import invest1Img from '@images/investors/invest-1.png'
+import invest2Img from '@images/investors/invest-2.png'
+import invest3Img from '@images/investors/invest-3.png'
+import invest4Img from '@images/investors/invest-4.png'
 
 import twitterImg from '@images/social/twitter.png'
 import githubImg from '@images/social/github.png'
@@ -17,10 +17,10 @@ const Footer = () => {
       <div className='footer-investors section-container'>
         <h2 className="text-center">Investors</h2>
         <div className='footer-investors__img-container'>
-          <img src={cygnilabsImg} width='112' />
-          <img src={standardImg} width='134' />
-          <img src={multicoinImg} width='271' />
-          <img src={alamedaImg} width='261' />
+          <img src={invest1Img} />
+          <img src={invest2Img} />
+          <img src={invest3Img} />
+          <img src={invest4Img}/>
         </div>
       </div>
       <div className='footer_container'>
