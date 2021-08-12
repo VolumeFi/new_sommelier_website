@@ -17,6 +17,7 @@ import "../assets/scss/main.scss"
 import welcomeBg from '@images/welcome.png'
 import spiral1Img from '@images/spiral-1.png'
 import spiral2Img from '@images/spiral-2.png'
+import chevronDownImg from '@images/chevron-down.png';
 import coinsImg from '@images/coins.png'
 import coinsWhiteImg from '@images/coins-white.png'
 
@@ -25,12 +26,6 @@ import usdcImg from '@images/coins/usdc.png'
 import usdtImg from '@images/coins/usdt.png'
 
 const etheriumImg = '/images/etherium.png'
-
-// Use Cases
-const imperImg = '/images/impermanent.png'
-const rebalancingImg = '/images/rebalancing.png'
-const lowerImg = '/images/lower-ether.png'
-const greaterImg = '/images/greater.png'
 
 const whyData = [
   {
@@ -114,6 +109,48 @@ export default function Main() {
           </a>
         </div>
         <div className='main-top__right-container' style={cellBoardStyle}>
+          <div className='cellar-board'>
+            <div className='cellar-board__left'>
+              <div className='cellar-board__left__header cellar-header'>
+                <p className='cellar-text-1'>Choose Cellar</p>
+                <div className='detail'>
+                  <img className='coin' src={ethImg} />
+                  <img className='coin' src={usdtImg} />
+                  <span className='pair'>ETH/USDT</span>
+                  <img className='chevron' src={chevronDownImg} />
+                </div>
+              </div>
+              <div className='cellar-board__left__body cellar-body'>
+                <p className='cellar-text-1'>Recent Cellar Performance</p>
+                <span className='cellar-text-2'>Past 7d / 24hrs</span>
+                <p className='cellar-text-3'>7d Pool Earnings</p>
+                <p className='cellar-text-4'>$1.234M</p>
+                <p className='cellar-text-3'>24hr Volume</p>
+                <p className='cellar-text-4'>$1.234M</p>
+              </div>
+            </div>
+            <div className='cellar-board__right'>
+              <div className='cellar-board__right__header cellar-header'>
+                <div className='detail'>
+                  <span className='cellar-text-5'>Network</span>
+                  <span className='cellar-text-6'>Ethereum</span>
+                </div>
+                <div className='detail'>
+                  <span className='cellar-text-5'>AMM</span>
+                  <span className='cellar-text-6'>Uniswap v3</span>
+                </div>
+                <a href='https://app.sommelier.finance' className='launch-button' target='_blank'>Add Liquidity</a>
+              </div>
+              <div className='cellar-board__right__body cellar-body'>
+                <p className='cellar-text-1'>Life Cellar Performance</p>
+                <span className='cellar-text-2'>Total Distribution</span>
+                <p className='cellar-text-3'>Life Pool Earnings</p>
+                <p className='cellar-text-4'>$1.234M</p>
+                <p className='cellar-text-3'>Total Value Locked</p>
+                <p className='cellar-text-4'>$12.020M</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <a name="features" id='features'></a>

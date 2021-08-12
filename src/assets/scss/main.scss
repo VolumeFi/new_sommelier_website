@@ -188,31 +188,197 @@
   .main-top__right-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 53px;
     min-height: 470px;
 
     @include respond-to(tablet) {
       margin-left: 2.75rem;
       margin-top: 0px;
-      width: 47%;
+      width: 60%;
     }
     @include respond-to(desktop) {
-      width: 47%;
+      width: 60%;
       min-height: 470px;
       margin-top: 0px;
       margin-left: auto;
     }
 
-    img {
-      padding: 77px;
+    .cellar-board {
       width: 100%;
-      // height: 100%;
-      max-width: 35.688rem;
-      max-height: 42.688rem;
-      object-fit: contain;
+      background: #0D182A;
+      border-radius: 5.44497px;
+      border: 1.08717px solid #2F3B58;
+      display: flex;
+      color: $white;
+
       @include respond-to(mobile) {
-        padding: 25px;
-        width: 275px;
+        display: none;
+      }
+
+      .cellar-text-1 {
+        @include font-base($font-family-source, normal, 500);
+        font-size: 10.8899px;
+        line-height: 16.33px;
+        letter-spacing: 0.0168em;
+        @include respond-to(mobile) {
+          font-size: 4.07681px;
+          line-height: 150%;
+        }
+      }
+
+      .cellar-text-2 {
+        @include font-base($font-family-source, normal, 400);
+        font-size: 8.71195px;
+        line-height: 13.07px;
+        letter-spacing: 0.0168em;
+        color: #D4D4D4;
+        @include respond-to(mobile) {
+          font-size: 3.26145px;
+          line-height: 150%;
+        }
+      }
+
+      .cellar-text-3 {
+        @include font-base($font-family-source, normal, 500);
+        font-size: 13.6124px;
+        line-height: 26px;
+        letter-spacing: 0.0168em;
+        color: #D4D4D4;
+        @include respond-to(mobile) {
+          font-size: 5.09601px;
+          line-height: 10px;
+        }
+      }
+
+      .cellar-text-4 {
+        @include font-base($font-family-source, normal, 700);
+        font-size: 29.9473px;
+        line-height: 26px;
+        letter-spacing: 0.0168em;
+        @include respond-to(mobile) {
+          font-size: 11.2112px;
+          line-height: 10px;
+        }
+      }
+
+      .cellar-text-5 {
+        @include font-base($font-family-source, normal, 500);
+        font-size: 10.8899px;
+        line-height: 26px;
+        letter-spacing: 0.0168em;
+        color: #D4D4D4;
+        @include respond-to(mobile) {
+          font-size: 4.07681px;
+          line-height: 10px;
+        }
+      }
+
+      .cellar-text-6 {
+        @include font-base($font-family-source, normal, bold);
+        font-size: 16.3349px;
+        line-height: 26px;
+        letter-spacing: 0.0168em;
+        @include respond-to(mobile) {
+          font-size: 6.11521px;
+          line-height: 10px;
+        }
+      }
+
+      .cellar-header {
+        padding: 17px 26px;
+        height: 100px;
+        @include respond-to(mobile) {
+          padding: 6.52px 12.64px;
+          height: 35px;
+        }
+      }
+      .cellar-body {
+        padding: 17px 26px;
+        height: 254px;
+        @include respond-to(mobile) {
+          padding: 6.52px 12.64px;
+          height: 100px;
+        }
+      }
+
+      &__left {
+        border-right: 1.08717px solid #2F3B58;
+
+        &__header {
+          border-top-left-radius: 5.44497px;
+          border-bottom: 1.03854px solid #2F3B58;
+          background: #162240;
+
+          .detail {
+            display: flex;
+            align-items: center;
+          }
+
+          .coin {
+            width: 33px;
+            height: 33px;
+            margin-right: 2px;
+            @include respond-to(mobile) {
+              width: 12px;
+              height: 12px;
+            }
+          }
+          .pair {
+            @include font-base($font-family-source, normal, 900);
+            font-size: 20.6909px;
+            line-height: 31.04px;
+            letter-spacing: 0.0168em;
+            margin-left: 5x;
+            @include respond-to(mobile) {
+              font-size: 7.74594px;
+              line-height: 150%;
+            }
+          }
+          .chevron {
+            width: 8.89px;
+            height: 5.33px;
+            margin-left: 4px;
+            @include respond-to(mobile) {
+              width: 3.45px;
+              height: 2.16px;
+            }
+          }
+        }
+      }
+
+      &__right {
+        flex: 1;
+        &__header {
+          border-bottom: 1.08717px solid #2F3B58;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .detail {
+            display: flex;
+            flex-direction: column;
+          }
+          .launch-button {
+            width: 143px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font-base($font-family-source, normal, bold);
+            font-size: 13.6124px;
+            line-height: 13px;
+            color: #fff;
+            background: linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+            border-radius: 5.71722px;
+            @include respond-to(mobile) {
+              width: 54px;
+              height: 12px;
+              font-size: 5.09601px;
+              line-height: 5px;
+              border-radius: 2.14033px;
+            }
+          }
+        }
       }
     }
   }
