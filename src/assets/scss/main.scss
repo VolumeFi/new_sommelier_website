@@ -113,9 +113,9 @@
     justify-content: center;
     border-radius: 10.5px;
     span {
-      background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
     }
     @include respond-to(mobile) {
       font-size: 1.175rem; //
@@ -138,13 +138,19 @@
   }
   .main-top {
     padding-bottom: 73px;
+    padding-left: 50px;
+    padding-right: 50px;
     display: flex;
     flex-direction: column;
     @include respond-to(tablet) {
       flex-direction: row;
+      padding-left: 50px;
+      padding-right: 50px;
     }
     @include respond-to(desktop) {
       flex-direction: row;
+      padding-left: 100px;
+      padding-right: 100px;
     }
   }
   .main-top__left-container {
@@ -152,18 +158,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 100px;
-    @include respond-to(mobile) {
-      margin-left: 40px;
-    }
 
     .new {
       @include text-content();
     }
     .cellars {
-      background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      color: $white;
       margin-top: -25px;
       @include respond-to(mobile) {
         margin-top: -15px;
@@ -171,24 +174,31 @@
     }
     .launch-button {
       @include text-button();
-      margin-top: 41px;
+      background: linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+      margin-top: 30px;
+      width: 232px;
+      height: 59px;
       @include respond-to(mobile) {
         margin-top: 1rem;
+        width: 104px;
+        height: 26.45px;
       }
     }
   }
   .main-top__right-container {
     display: flex;
     justify-content: center;
-    margin-left: 2.75rem;
     margin-top: 53px;
+    min-height: 470px;
 
     @include respond-to(tablet) {
       margin-left: 2.75rem;
       margin-top: 0px;
+      width: 47%;
     }
     @include respond-to(desktop) {
       width: 47%;
+      min-height: 470px;
       margin-top: 0px;
       margin-left: auto;
     }
@@ -254,12 +264,7 @@
 
     h2 {
       color: $text-black;
-      span {
-        background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      margin-bottom: 115px;
+      margin-bottom: 81px;
     }
 
   }
@@ -293,7 +298,7 @@
       }
 
       h4 {
-        @include heading-h4($text-black, center);
+        @include heading-h4($text-black, left);
         display: block;
         margin-bottom: 20px;
         @include respond-to(tablet) {
@@ -304,7 +309,7 @@
         }
       }
       p {
-        @include text-content($text-black, center);
+        @include text-content($text-black, left);
       }
     }
   }
@@ -357,7 +362,7 @@
         align-items: center;
 
         h4 {
-          text-align: center;
+          text-align: left;
           margin-top: 74px;
           display: block;
           max-width: 358px;
@@ -367,7 +372,7 @@
 
         p {
           @include text-content();
-          text-align: center;
+          text-align: left;
           display: block;
           max-width: 358px;
           margin-left: auto;
@@ -769,6 +774,7 @@
     // }
     @include respond-to(desktop) {
       flex-direction: row;
+      justify-content: space-between;
       padding-left: 100px;
       padding-right: 100px
     }
@@ -780,6 +786,7 @@
     justify-content: center;
     align-items: flex-start;
     flex: 1;
+    max-width: 407px;
 
     @include respond-to(mobile) {
       margin-left: 40px;
@@ -801,6 +808,8 @@
       @include text-button();
       margin-top: 41px;
       background: linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+      width: 232px;
+      height: 59px;
       span {
         -webkit-text-fill-color: $white
       }
@@ -884,7 +893,7 @@
         }
 
         &__pool {
-          @include font-base($font-family-lato, normal, 700);
+          @include font-base($font-family-source, normal, 900);
           font-size: 18px;
           line-height: 26px;
           text-align: center;
@@ -892,12 +901,12 @@
           color: $white;
           margin-top: 5px;
           @include respond-to(tablet) {
-            @include font-base($font-family-lato, normal, 800);
+            @include font-base($font-family-source, normal, 900);
             font-size: 40px;
             line-height: 150%;
           }
           @include respond-to(desktop) {
-            @include font-base($font-family-lato, normal, 800);
+            @include font-base($font-family-source, normal, 900);
             font-size: 40px;
             line-height: 150%;
           }
@@ -914,36 +923,36 @@
         }
         
         p {
-          @include font-base($font-family-lato, normal, 600);
+          @include font-base($font-family-source, normal, 400);
           font-size: 7px;
           line-height: 10px;
           color: $white;
           letter-spacing: 0.0168em;
           margin-bottom: 0px;
           @include respond-to(tablet) {
-            @include font-base($font-family-lato, normal, 600);
+            @include font-base($font-family-source, normal, 400);
             font-size: 15.1095px;
             line-height: 150%;
           }
           @include respond-to(desktop) {
-            @include font-base($font-family-lato, normal, 600);
+            @include font-base($font-family-source, normal, 400);
             font-size: 15.1095px;
             line-height: 150%;
           }
         }
         span {
-          @include font-base($font-family-lato, normal, normal);
+          @include font-base($font-family-source, normal, 400);
           font-size: 6px;
           line-height: 8px;
           color: #D4D4D4;
           letter-spacing: 0.0168em;
           @include respond-to(tablet) {
-            @include font-base($font-family-lato, normal, normal);
+            @include font-base($font-family-source, normal, 400);
             font-size: 12.0876px;
             line-height: 150%;
           }
           @include respond-to(desktop) {
-            @include font-base($font-family-lato, normal, normal);
+            @include font-base($font-family-source, normal, 400);
             font-size: 12.0876px;
             line-height: 150%;
           }
@@ -952,7 +961,7 @@
       &__footer {
         text-align: center;
         .add-liquidity-button {
-          @include font-base($font-family-lato, normal, 700);
+          @include font-base($font-family-source, normal, bold);
           font-size: 8.6px;
           line-height: 12.95px;
           display: flex;
@@ -961,7 +970,6 @@
           cursor: pointer;
           width: 84px;
           height: 25px;
-          border: 1.6px solid $white;
           box-sizing: border-box;
           border-radius: 7px;
           color: $white;
@@ -970,25 +978,24 @@
           margin-right: auto;
           margin-bottom: 15px;
           margin-top: 15px;
+          background: linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
           @include respond-to(tablet) {
-            width: 184px;
-            height: 56px;
-            border: 2px solid $white;
-            border-radius: 8.4px;
-            @include font-base($font-family-lato, normal, 700);
+            width: 203.79px;
+            height: 49px;
+            border-radius: 10.5px;
+            @include font-base($font-family-source, normal, bold);
             font-size: 20px;
-            line-height: 29px;
+            line-height: 18.6px;
             margin-bottom: 33px;
             margin-top: 33px;
           }
           @include respond-to(desktop) {
-            width: 184px;
-            height: 56px;
-            border: 2px solid $white;
-            border-radius: 8.4px;
-            @include font-base($font-family-lato, normal, 700);
+            width: 203.79px;
+            height: 49px;
+            border-radius: 10.5px;
+            @include font-base($font-family-source, normal, bold);
             font-size: 20px;
-            line-height: 29px;
+            line-height: 18.6px;
             margin-bottom: 33px;
             margin-top: 33px;
           }
@@ -997,30 +1004,30 @@
     }
 
     .cellar-badge {
-      @include font-base($font-family-lato, normal, 800);
+      @include font-base($font-family-source, normal, 900);
       font-size: 6.5px;
       line-height: 9.3px;
       width: 43px;
       height: 10px;
-      background: linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+      background: #F8E04D;
       border-radius: 6.26966px;
-      color: $white;
+      color: #162240;
       display: flex;
       justify-content: center;
       align-items: center;
       @include respond-to(tablet) {
         width: 93px;
         height: 24.76px;
-        @include font-base($font-family-lato, normal, 800);
+        @include font-base($font-family-source, normal, 900);
         font-size: 14.6292px;
-        line-height: 142%;
+        line-height: 19.88px;
       }
       @include respond-to(desktop) {
         width: 93px;
         height: 24.76px;
-        @include font-base($font-family-lato, normal, 800);
+        @include font-base($font-family-source, normal, 900);
         font-size: 14.6292px;
-        line-height: 142%;
+        line-height: 19.88px;
       }
     }
 
@@ -1033,34 +1040,32 @@
         margin-top: 15px;
       }
       &-title {
-        @include font-base($font-family-lato, normal, normal);
+        @include font-base($font-family-source, normal, 500);
         color: #d4d4d4;
         font-size: 9.5px;
         line-height: 16.3px;
         @include respond-to(tablet) {
-          font-size: 21.1533px;
-          line-height: 36px;
+          font-size: 18px;
+          line-height: 48px;
         }
         @include respond-to(desktop) {
-          font-size: 21.1533px;
-          line-height: 36px;
+          font-size: 18px;
+          line-height: 48px;
         }
       }
       &-value {
-        @include font-base($font-family-lato, normal, bold);
+        @include font-base($font-family-source, normal, bold);
         color: $white;
         font-size: 19.3px;
         line-height: 16.3px;
         margin-top: 10px;
         @include respond-to(tablet) {
-          margin-top: 14px;
-          font-size: 42.3066px;
-          line-height: 36px;
+          font-size: 40px;
+          line-height: 48px;
         }
         @include respond-to(desktop) {
-          margin-top: 14px;
-          font-size: 42.3066px;
-          line-height: 36px;
+          font-size: 40px;
+          line-height: 48px;
         }
       }
     }
