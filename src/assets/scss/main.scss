@@ -581,7 +581,7 @@
       }
       display: flex;
       flex-flow: row wrap;
-      justify-content: center;
+      justify-content: flex-start;
 
       &-member {
         width: 33%;
@@ -708,10 +708,18 @@
       flex-direction: column;
       padding: 11px 26px;
       background: $panel-black;
+      max-width: 100%;
       width: 100%;
       margin-bottom: 24px;
       border-radius: 7.3px;
+      @include respond-to(tablet) {
+        max-width: 100%;
+        padding: 11px 26px;
+        border-radius: 7.3px;
+        flex-direction: row;
+      }
       @include respond-to(desktop) {
+        max-width: 988px;
         padding: 18px 70px;
         border-radius: 20px;
         flex-direction: row;
@@ -719,15 +727,27 @@
     }
     &-title {
       @include heading-h4();
+      text-align: left;
       font-size: 13px !important;
       flex: 1;
+      max-width: 179px;
+      @include respond-to(tablet) {
+        max-width: 273px;
+        font-size: 26px !important;
+      }
       @include respond-to(desktop) {
+        max-width: 273px;
         font-size: 26px !important;
       }
     }
     &-description {
       @include text-content($white, left);
       font-size: 12px !important;
+      @include respond-to(tablet) {
+        margin-left: 100px;
+        width: 431px;
+        font-size: 20px !important;
+      }
       @include respond-to(desktop) {
         margin-left: 100px;
         width: 431px;
