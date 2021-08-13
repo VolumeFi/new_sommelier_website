@@ -411,11 +411,22 @@
     }
     .add-liquidity-button {
       @include text-button();
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-decoration: none;
-      padding: 0.94935rem 1.13921875rem;
       border-radius: 10.6327px;
-      border: 3.22px solid #E323FF;
+      background: linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
+      color: $white;
       margin-top: 60px;
+      width: 232px;
+      height: 59px;
+
+      @include respond-to(mobile) {
+        width: 104px;
+        height: 26.45px;
+        border-radius: 10.5px;
+      }
     }
   }
   // Why Sommelier

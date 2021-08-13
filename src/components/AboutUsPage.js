@@ -104,7 +104,7 @@ const teamMembers = [
   },
   {
     name: 'Ukpai Ugochi',
-    role: 'Junior Rust Developer',
+    role: 'Rust Developer',
     avatar: photoUkpai,
     twitter: 'https://twitter.com/',
     linkedin: 'https://www.linkedin.com/in/'
