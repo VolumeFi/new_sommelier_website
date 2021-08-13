@@ -540,6 +540,10 @@
         flex-direction: column;
         align-items: center;
 
+        @include respond-to(mobile) {
+          align-items: flex-start;
+        }
+
         h4 {
           text-align: left;
           margin-top: 74px;
@@ -550,6 +554,8 @@
 
           @include respond-to(mobile) {
             margin-top: 43px;
+            margin-left: 0px;
+            margin-right: 0px;
           }
         }
 
