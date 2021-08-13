@@ -24,6 +24,11 @@ import photoTony from '@images/team/tony.png'
 import photoJustin from '@images/team/justin.png'
 import photoDeborah from '@images/team/deborah.png'
 import photoLucky from '@images/team/lucky.png'
+import photoMantas from '@images/team/mantas.png'
+import photoElliot from '@images/team/ukpai.png'
+import photoLevi from '@images/team/levi.png'
+import photoUkpai from '@images/team/ukpai.png'
+import photoJoshua from '@images/team/joshua.png'
 
 // Team
 const teamMembers = [
@@ -75,6 +80,41 @@ const teamMembers = [
     avatar: photoLucky,
     twitter: 'https://twitter.com/luckyOdiseti',
     linkedin: 'https://www.linkedin.com/in/lucky-odisetti-701b5437'
+  },
+  {
+    name: 'Mantas Vidutis',
+    role: 'Core Protocol Engineer',
+    avatar: photoMantas,
+    twitter: 'https://twitter.com/',
+    linkedin: 'https://www.linkedin.com/in/'
+  },
+  {
+    name: 'Elliot Shiu',
+    role: 'Engineering Lead',
+    avatar: photoElliot,
+    twitter: 'https://twitter.com/',
+    linkedin: 'https://www.linkedin.com/in/'
+  },
+  {
+    name: 'Levi Cook',
+    role: 'Core Protocol Engineer',
+    avatar: photoLevi,
+    twitter: 'https://twitter.com/',
+    linkedin: 'https://www.linkedin.com/in/'
+  },
+  {
+    name: 'Ukpai Ugochi',
+    role: 'Junior Rust Developer',
+    avatar: photoUkpai,
+    twitter: 'https://twitter.com/',
+    linkedin: 'https://www.linkedin.com/in/'
+  },
+  {
+    name: 'Joshua Philippe',
+    role: 'Design Lead',
+    avatar: photoJoshua,
+    twitter: 'https://twitter.com/',
+    linkedin: 'https://www.linkedin.com/in/'
   }
 ]
 
@@ -129,15 +169,14 @@ export default function AboutUsPage() {
           <h1>What is Sommelier?</h1>
           <p>Sommelier is a bet that Ethereum will be a dominant player in the global economy. Sommelier consists of the Cosmos Stargate SDK, its Tendermint-based consensus layer and a decentralized, bi-directional Ethereum bridge, managed by a global network of validators.</p>
           <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
-            <span>Add Liquidity</span>
-            <img src={coinsImg} alt='frame image' className='mr-2'/>
+            Add Liquidity
           </a>
         </div>
         <div className='main-what__right'>
           <img src={spiral2Img} alt='frame image' width='100%'/>
         </div>
       </div>
-      <div className='main-feature section-container'>
+      <div className='main-feature'>
         {featuresData.map((item, index) => (
           <div className='main-feature-item' key={`about-features-${index}`}>
             <div className='main-feature-title'>{item.title}</div>

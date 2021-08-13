@@ -178,7 +178,7 @@ export default function Main() {
         </div>
       </div>
       <a name="usecases" id='usecases'></a>
-      <div className='main-usecases section-container'>
+      <div className='main-usecases'>
         <h2>
           Use Cases
         </h2>
