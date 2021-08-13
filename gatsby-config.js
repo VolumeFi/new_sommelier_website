@@ -7,6 +7,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-create-page-html`
+    },
+    {
       resolve: `gatsby-plugin-sass`
     },
     {
