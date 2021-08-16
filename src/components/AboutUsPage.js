@@ -25,7 +25,7 @@ import photoJustin from '@images/team/justin.png'
 import photoDeborah from '@images/team/deborah.png'
 import photoLucky from '@images/team/lucky.png'
 import photoMantas from '@images/team/mantas.png'
-import photoElliot from '@images/team/ukpai.png'
+import photoElliot from '@images/team/elliot.png'
 import photoLevi from '@images/team/levi.png'
 import photoUkpai from '@images/team/ukpai.png'
 import photoJoshua from '@images/team/joshua.png'
@@ -85,36 +85,36 @@ const teamMembers = [
     name: 'Mantas Vidutis',
     role: 'Core Protocol Engineer',
     avatar: photoMantas,
-    twitter: 'https://twitter.com/',
-    linkedin: 'https://www.linkedin.com/in/'
+    twitter: 'https://twitter.com/mvid',
+    linkedin: 'https://www.linkedin.com/in/mvidutis'
   },
   {
     name: 'Elliot Shiu',
     role: 'Engineering Lead',
     avatar: photoElliot,
-    twitter: 'https://twitter.com/',
-    linkedin: 'https://www.linkedin.com/in/'
+    twitter: 'https://twitter.com/sandbochs',
+    linkedin: 'https://www.linkedin.com/in/elliotshiu/'
   },
   {
     name: 'Levi Cook',
     role: 'Core Protocol Engineer',
     avatar: photoLevi,
-    twitter: 'https://twitter.com/',
-    linkedin: 'https://www.linkedin.com/in/'
+    twitter: 'https://twitter.com/levicook',
+    linkedin: 'https://www.linkedin.com/in/levicook/'
   },
   {
     name: 'Ukpai Ugochi',
     role: 'Rust Developer',
     avatar: photoUkpai,
-    twitter: 'https://twitter.com/',
-    linkedin: 'https://www.linkedin.com/in/'
+    twitter: 'https://twitter.com/hannydevelop',
+    linkedin: 'https://www.linkedin.com/in/ugochi-ukpai-1361b0198/'
   },
   {
     name: 'Joshua Philippe',
     role: 'Design Lead',
     avatar: photoJoshua,
-    twitter: 'https://twitter.com/',
-    linkedin: 'https://www.linkedin.com/in/'
+    twitter: 'https://twitter.com/shua_lippe',
+    linkedin: 'https://www.linkedin.com/in/joshuaphilippe/'
   }
 ]
 
@@ -185,7 +185,7 @@ export default function AboutUsPage() {
         ))}
       </div>
       <div className='main-team section-container'>
-        <h2>Sommelier Team</h2>
+        <h2>The Network</h2>
         <div className='main-team__content'>
           {teamMembers.map((item, index) => (
             <div key={`team-profile-${index}`} className='main-team__content-member profile-container'>
