@@ -42,7 +42,7 @@ const EventPage = ({ blok, title, history, join_community }) => {
           events.map((blok, index) => {
             const event = JSON.parse(blok.content);
             //console.log(event);
-            return (<Event blok={event} history={history} slug={blok.full_slug} join_community={join_community} uid={blok.uid} />)
+            return (<Event key={`event-page-${index}`} blok={event} history={history} slug={blok.full_slug} join_community={join_community} uid={blok.uid} />)
           })
         }
 

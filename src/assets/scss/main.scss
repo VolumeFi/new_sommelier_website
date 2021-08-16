@@ -427,6 +427,19 @@
     align-items: center;
     min-height: 100vh;
 
+    padding-left: 100px;
+    padding-right: 100px;
+
+    @include respond-to(tablet) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include respond-to(mobile) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
     img {
       width: 14.5rem;
     }
@@ -504,12 +517,12 @@
       h4 {
         @include heading-h4($text-black, left);
         display: block;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         @include respond-to(tablet) {
-          height: 140px;
+          min-height: 100px;
         }
         @include respond-to(desktop) {
-          height: 140px;
+          min-height: 100px;
         }
       }
       p {
@@ -1539,6 +1552,15 @@
       line-height: 15px;
       margin-top: 19px;
     }
+  }
+
+  .event-join-us {
+    border: 0.943144px solid #2F3B58;
+    border-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 36px;
+    margin-top: 36px;
   }
 
   .event-action {

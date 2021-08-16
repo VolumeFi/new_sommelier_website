@@ -75,14 +75,17 @@ export default class extends React.Component {
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Display the result in the element with id="demo"
-      document.getElementById(elementId).innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+      const countDiv = document.getElementById(elementId);
 
-      // If the count down is finished, write some text
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById(elementId).innerHTML = "COMPLETED";
+      if (countDiv) {
+        // Display the result in the element with id="demo"
+        countDiv.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          countDiv.innerHTML = "COMPLETED";
+        }
       }
     }, 250);
   }

@@ -122,11 +122,6 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
     add_to_calc = <div title="Add to Calendar" className="addeventatc">Register for Event<span className="start">{ s_date.toLocaleString() }</span><span className="end">{ e_date.toLocaleString() }</span><span className="title">{ event.title }</span><span className="description">{ event.description.content[0].content[0].text }</span><span className="location">{ event.location }</span></div>;
   }
 
-  // let join_us = "";
-  // if (!history) {
-  //   join_us = <h3 style={{textAlign: 'center'}}> JOIN US IN</h3>;
-  // }
-
   return (
     <div className='event-item'>
       <div className='event-item__left'>
@@ -146,6 +141,12 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
         )}
       </div>
       <div className='event-item__right'>
+        {!history && (
+          <div className='event-join-us'>
+            <h4>Join Us In:</h4>
+            <h2 id={uid} style={{textAlign: 'center'}}></h2>
+          </div>
+        )}
         <div className='event-register'>
           <div className='event-action'>
             <a className='event-action-register' target="_blank">
