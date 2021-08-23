@@ -113,21 +113,23 @@ export default function Main() {
             <div className='cellar-board'>
               <div className='cellar-board__left'>
                 <div className='cellar-board__left__header cellar-header'>
-                  <p className='cellar-text-1'>Choose Cellar</p>
-                  <div className='detail'>
-                    <img className='coin' src={ethImg} />
-                    <img className='coin' src={usdtImg} />
-                    <span className='pair'>ETH/USDT</span>
-                    <img className='chevron' src={chevronDownImg} />
+                  <div className='cellar-board__left__header-content'>
+                    <span className='cellar-text-1'>Choose Cellar</span>
+                    <div className='detail'>
+                      <img className='coin' src={ethImg} />
+                      <img className='coin' src={usdtImg} />
+                      <span className='pair'>ETH/USDT</span>
+                      <img className='chevron' src={chevronDownImg} />
+                    </div>
                   </div>
                 </div>
                 <div className='cellar-board__left__body cellar-body'>
-                  <p className='cellar-text-1'>Recent Cellar Performance</p>
+                  <span className='cellar-text-1'>Recent Cellar Performance</span>
                   <span className='cellar-text-2'>Past 7d / 24hrs</span>
-                  <p className='cellar-text-3'>7d Pool Earnings</p>
-                  <p className='cellar-text-4'>$1.234M</p>
-                  <p className='cellar-text-3'>24hr Volume</p>
-                  <p className='cellar-text-4'>$1.234M</p>
+                  <span className='cellar-text-3'>7d Pool Earnings</span>
+                  <span className='cellar-text-4'>$1.234M</span>
+                  <span className='cellar-text-3'>24hr Volume</span>
+                  <span className='cellar-text-4'>$1.234M</span>
                 </div>
               </div>
               <div className='cellar-board__right'>
@@ -140,15 +142,15 @@ export default function Main() {
                     <span className='cellar-text-5'>AMM</span>
                     <span className='cellar-text-6'>Uniswap v3</span>
                   </div>
-                  <a href='https://app.sommelier.finance' className='launch-button' target='_blank'>Add Liquidity</a>
+                  {/* <a href='https://app.sommelier.finance' className='launch-button' target='_blank'>Add Liquidity</a> */}
                 </div>
                 <div className='cellar-board__right__body cellar-body'>
-                  <p className='cellar-text-1'>Life Cellar Performance</p>
+                  <span className='cellar-text-1'>Life Cellar Performance</span>
                   <span className='cellar-text-2'>Total Distribution</span>
-                  <p className='cellar-text-3'>Life Pool Earnings</p>
-                  <p className='cellar-text-4'>$1.234M</p>
-                  <p className='cellar-text-3'>Total Value Locked</p>
-                  <p className='cellar-text-4'>$12.020M</p>
+                  <span className='cellar-text-3'>Life Pool Earnings</span>
+                  <span className='cellar-text-4'>$1.234M</span>
+                  <span className='cellar-text-3'>Total Value Locked</span>
+                  <span className='cellar-text-4'>$12.020M</span>
                 </div>
               </div>
             </div>
@@ -219,11 +221,11 @@ export default function Main() {
         <div className='main-cellar__right-container'>
           <div className='cellar-item'>
             <div className='cellar-item__header'>
-              <div className='cellar-item__header__badge'>
-                {/* <div className='cellar-badge'>
+              {/* <div className='cellar-item__header__badge'>
+                <div className='cellar-badge'>
                   Highlighted
-                </div> */}
-              </div>
+                </div>
+              </div> */}
               <div className='cellar-item__header__icon'>
                 <img src={ethImg}/>
                 <img src={usdtImg}/>
@@ -252,9 +254,9 @@ export default function Main() {
                 </div>
               </div>
             </div>
-            <div className='cellar-item__footer'>
+            {/* <div className='cellar-item__footer'>
               <a href='https://app.sommelier.finance/' target='_blank' className='add-liquidity-button'>Add Liquidity</a>
-            </div>
+            </div> */}
           </div>
 
           <div className='cellar-item'>
