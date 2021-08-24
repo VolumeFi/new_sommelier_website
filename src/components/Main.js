@@ -109,31 +109,21 @@ export default function Main() {
           </a>
         </div>
         <div className='main-top__right-container' style={cellBoardStyle}>
-          <div className='cellar-board-wrapper'>
-            <div className='cellar-board'>
-              <div className='cellar-board__left'>
-                <div className='cellar-board__left__header cellar-header'>
-                  <div className='cellar-board__left__header-content'>
-                    <span className='cellar-text-1'>Choose Cellar</span>
-                    <div className='detail'>
-                      <img className='coin' src={ethImg} />
-                      <img className='coin' src={usdtImg} />
-                      <span className='pair'>ETH/USDT</span>
-                      <img className='chevron' src={chevronDownImg} />
-                    </div>
+          <div className='cellar-board'>
+            <div className='cellar-board-top'>
+              <div className='cellar-board-left'>
+                <div className='cellar-board-header'>
+                  <span className='cellar-text-1'>Choose Cellar</span>
+                  <div className='detail'>
+                    <img className='coin' src={ethImg} />
+                    <img className='coin' src={usdtImg} />
+                    <span className='pair'>ETH/USDT</span>
+                    <img className='chevron' src={chevronDownImg} />
                   </div>
                 </div>
-                <div className='cellar-board__left__body cellar-body'>
-                  <span className='cellar-text-1'>Recent Cellar Performance</span>
-                  <span className='cellar-text-2'>Past 7d / 24hrs</span>
-                  <span className='cellar-text-3'>7d Pool Earnings</span>
-                  <span className='cellar-text-4'>$1.234M</span>
-                  <span className='cellar-text-3'>24hr Volume</span>
-                  <span className='cellar-text-4'>$1.234M</span>
-                </div>
               </div>
-              <div className='cellar-board__right'>
-                <div className='cellar-board__right__header cellar-header'>
+              <div className='cellar-board-right'>
+                <div className='cellar-board-header2'>
                   <div className='detail'>
                     <span className='cellar-text-5'>Network</span>
                     <span className='cellar-text-6'>Ethereum</span>
@@ -144,7 +134,21 @@ export default function Main() {
                   </div>
                   {/* <a href='https://app.sommelier.finance' className='launch-button' target='_blank'>Add Liquidity</a> */}
                 </div>
-                <div className='cellar-board__right__body cellar-body'>
+              </div>
+            </div>
+            <div className='cellar-board__bottom'>
+              <div className='cellar-board-left'>
+                <div className='cellar-board-body'>
+                  <span className='cellar-text-1'>Recent Cellar Performance</span>
+                  <span className='cellar-text-2'>Past 7d / 24hrs</span>
+                  <span className='cellar-text-3'>7d Pool Earnings</span>
+                  <span className='cellar-text-4'>$1.234M</span>
+                  <span className='cellar-text-3'>24hr Volume</span>
+                  <span className='cellar-text-4'>$1.234M</span>
+                </div>
+              </div>
+              <div className='cellar-board-right'>
+                <div className='cellar-board-body'>
                   <span className='cellar-text-1'>Life Cellar Performance</span>
                   <span className='cellar-text-2'>Total Distribution</span>
                   <span className='cellar-text-3'>Life Pool Earnings</span>
