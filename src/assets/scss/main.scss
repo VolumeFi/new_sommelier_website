@@ -137,7 +137,7 @@
     color: #ff488e;
   }
   .main-top {
-    padding-bottom: 73px;
+    padding-bottom: 192px;
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
@@ -517,8 +517,8 @@
   }
   .main-welcome {
     color: $white;
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 110px;
+    padding-bottom: 229px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -600,17 +600,21 @@
     }
 
     &-item {
-      padding: 15px 25px;
-      width: 100%;
+      padding: 32px 22px;
+      width: 315px;
+      height: 353px;
       box-sizing: border-box;
       margin-block-end: 20px;
+      border: 3px solid rgba(196, 196, 196, 0.2);
+      border-radius: 8px;
+      
 
-      @include respond-to(tablet) {
-        width: 50%;
-      }
-      @include respond-to(desktop) {
-        width: 25%;
-      }
+      // @include respond-to(tablet) {
+      //   width: 50%;
+      // }
+      // @include respond-to(desktop) {
+      //   width: 25%;
+      // }
 
       h4 {
         @include heading-h4($text-black, left);
