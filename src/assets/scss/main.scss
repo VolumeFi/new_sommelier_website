@@ -609,14 +609,14 @@
     padding-left: 50px;
     padding-right: 50px;
     
-    @include respond-to(tablet) {
-      padding-left: 155px;
-      padding-right: 155px;
-    }
-    @include respond-to(desktop) {
-      padding-left: 155px;
-      padding-right: 155px;
-    }
+    // @include respond-to(tablet) {
+    //   padding-left: 80px;
+    //   padding-right: 80px;
+    // }
+    // @include respond-to(desktop) {
+    //   padding-left: 80px;
+    //   padding-right: 80px;
+    // }
 
     &-wrapper {
       display: flex;
