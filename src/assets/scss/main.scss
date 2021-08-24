@@ -1200,8 +1200,10 @@
           }
 
           img {
-            width: 29px;
-            height: 29px;
+            // width: 29px;
+            // height: 29px;
+            width: 65px;
+            height: 65px;
             margin-left: 4px;
             margin-right: 4px;
             @include respond-to(tablet) {
@@ -1217,8 +1219,8 @@
 
         &__pool {
           @include font-base($font-family-source, normal, 900);
-          font-size: 18px;
-          line-height: 26px;
+          font-size: 30px;
+          line-height: 30px;
           text-align: center;
           letter-spacing: 0.0168em;
           color: $white;
@@ -1249,8 +1251,8 @@
         
         p {
           @include font-base($font-family-source, normal, 400);
-          font-size: 14px;
-          line-height: 14px;
+          font-size: 12px;
+          line-height: 12px;
           color: $white;
           letter-spacing: 0.0168em;
           margin-bottom: 0px;
@@ -1268,8 +1270,8 @@
         span {
           padding-top: 8px;
           @include font-base($font-family-source, normal, 400);
-          font-size: 12px;
-          line-height: 12px;
+          font-size: 10px;
+          line-height: 10px;
           color: #D4D4D4;
           letter-spacing: 0.0168em;
           @include respond-to(tablet) {
@@ -1368,8 +1370,8 @@
       &-title {
         @include font-base($font-family-source, normal, 500);
         color: #d4d4d4;
-        font-size: 16px;
-        line-height: 16px;
+        font-size: 14px;
+        line-height: 14px;
         @include respond-to(tablet) {
           font-size: 16px;
           line-height: 16px;
@@ -1382,8 +1384,8 @@
       &-value {
         @include font-base($font-family-source, normal, bold);
         color: $white;
-        font-size: 35px;
-        line-height: 35px;
+        font-size: 30px;
+        line-height: 30px;
         margin-top: 13px;
         @include respond-to(tablet) {
           font-size: 35px;

@@ -294,9 +294,9 @@ export default function Main() {
                 </div>
               </div>
             </div>
-            <div className='cellar-item__footer'>
+            {/* <div className='cellar-item__footer'>
               <a href='https://app.sommelier.finance/' target='_blank' className='add-liquidity-button'>Add Liquidity</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
