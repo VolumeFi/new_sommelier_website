@@ -27,7 +27,7 @@ import usdtImg from '@images/coins/usdt.png'
 
 const etheriumImg = '/images/etherium.png'
 
-const whyData = [
+const whyData1 = [
   {
     title: 'Liquidity Provider Management Tools',
     description: 'Sommelier Cellars are focused on Uniswap v3 which has high degree of capital efficiency in the Range Order structure.',
@@ -36,6 +36,9 @@ const whyData = [
     title: 'Bi-Directional Ethereum Bridge',
     description: 'Ethereum transactions are managed by the most functional bridge optimized for extending Ethereum features for Liquidity Providers.',
   },
+]
+
+const whyData2 = [
   {
     title: 'Data Driven Strategies',
     description: 'Sommelier validators leverage optimal liquidity management strategies based on blockchain transaction data and advanced price prediction models.',
@@ -174,12 +177,22 @@ export default function Main() {
             Why Sommelier Cellars?
           </h2>
           <div className='main-why__content'>
-            {whyData.map((data, index) => (
-              <div className='main-why__content-item' key={`why-title-${index}`}>
-                <h4>{data.title}</h4>
-                <p>{data.description}</p>
+            <div className='main-why__content-wrapper'>
+              {whyData1.map((data, index) => (
+                <div className='main-why__content-item' key={`why1-title-${index}`}>
+                  <h4>{data.title}</h4>
+                  <p>{data.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className='main-why__content-wrapper'>
+              {whyData2.map((data, index) => (
+                <div className='main-why__content-item' key={`why2-title-${index}`}>
+                  <h4>{data.title}</h4>
+                  <p>{data.description}</p>
+                </div>
+              ))}
               </div>
-            ))}
           </div>
         </div>
       </div>
