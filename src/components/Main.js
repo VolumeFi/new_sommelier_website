@@ -113,7 +113,7 @@ export default function Main() {
             <div className='cellar-board-top'>
               <div className='cellar-board-left'>
                 <div className='cellar-board-header'>
-                  <span className='cellar-text-1'>Choose Cellar</span>
+                  <span className='cellar-text-2'>Choose Cellar</span>
                   <div className='detail'>
                     <img className='coin' src={ethImg} />
                     <img className='coin' src={usdtImg} />
@@ -139,9 +139,8 @@ export default function Main() {
             <div className='cellar-board__bottom'>
               <div className='cellar-board-left'>
                 <div className='cellar-board-body'>
-                  <span className='cellar-text-1'>Recent Cellar Performance</span>
-                  <span className='cellar-text-2'>Past 7d / 24hrs</span>
-                  <span className='cellar-text-3'>7d Pool Earnings</span>
+                  <span className='cellar-text-2'>Recent Cellar Performance</span>
+                  <span className='cellar-text-3'>7d Cellar Earnings</span>
                   <span className='cellar-text-4'>$1.234M</span>
                   <span className='cellar-text-3'>24hr Volume</span>
                   <span className='cellar-text-4'>$1.234M</span>
@@ -149,11 +148,10 @@ export default function Main() {
               </div>
               <div className='cellar-board-right'>
                 <div className='cellar-board-body'>
-                  <span className='cellar-text-1'>Life Cellar Performance</span>
-                  <span className='cellar-text-2'>Total Distribution</span>
-                  <span className='cellar-text-3'>Life Pool Earnings</span>
+                  <span className='cellar-text-2'>Lifetime Performance</span>
+                  <span className='cellar-text-3'>Lifetime Earnings</span>
                   <span className='cellar-text-4'>$1.234M</span>
-                  <span className='cellar-text-3'>Total Value Locked</span>
+                  <span className='cellar-text-3'>Total Value Locked(TVL)</span>
                   <span className='cellar-text-4'>$12.020M</span>
                 </div>
               </div>
@@ -239,11 +237,10 @@ export default function Main() {
               </div>
             </div>
             <div className='cellar-item__body'>
-              <p>Recent Cellar Performance</p>
-              <span>Past 7d/ 24hrs</span>
+              <span>Recent Performance</span>
               <div className='cellar-pool-detail'>
                 <div className='cellar-pool-detail-title'>
-                  7d Pool Earnings
+                  7d Cellar Earnings
                 </div>
                 <div className='cellar-pool-detail-value'>
                   $1M

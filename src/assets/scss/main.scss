@@ -260,71 +260,71 @@
       }
 
       .cellar-text-1 {
-        @include font-base($font-family-source, normal, 500);
+        @include font-base($font-family-lato, normal, 500);
         font-size: 14px;
         line-height: 14px;
         letter-spacing: 0.0168em;
+        @include respond-to(mobile) {
+          font-size: 14px;
+          line-height: 14px;
+        }
+      }
+
+      .cellar-text-2 {
+        @include font-base($font-family-lato, normal, 500);
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.0168em;
+        color: #888585;
         @include respond-to(mobile) {
           font-size: 12px;
           line-height: 12px;
         }
       }
 
-      .cellar-text-2 {
-        @include font-base($font-family-source, normal, 400);
-        font-size: 12px;
-        line-height: 12px;
-        letter-spacing: 0.0168em;
-        color: #D4D4D4;
-        @include respond-to(mobile) {
-          font-size: 10px;
-          line-height: 10px;
-        }
-      }
-
       .cellar-text-3 {
-        @include font-base($font-family-source, normal, 500);
+        @include font-base($font-family-lato, normal, normal);
         font-size: 16px;
         line-height: 16px;
         letter-spacing: 0.0168em;
         color: #D4D4D4;
         @include respond-to(mobile) {
-          font-size: 14px;
-          line-height: 14px;
+          font-size: 16px;
+          line-height: 16px;
         }
       }
 
       .cellar-text-4 {
-        @include font-base($font-family-source, normal, 700);
-        font-size: 35px;
-        line-height: 35px;
+        @include font-base($font-family-lato, normal, bold);
+        font-size: 36px;
+        line-height: 36px;
         letter-spacing: 0.0168em;
         @include respond-to(mobile) {
-          font-size: 30px;
-          line-height: 30px;
+          font-size: 36px;
+          line-height: 36px;
         }
       }
 
       .cellar-text-5 {
-        @include font-base($font-family-source, normal, 500);
+        @include font-base($font-family-lato, normal, normal);
         font-size: 16px;
         line-height: 16px;
         letter-spacing: 0.0168em;
         color: #D4D4D4;
         @include respond-to(mobile) {
-          font-size: 14px;
-          line-height: 14px;
+          font-size: 16px;
+          line-height: 16px;
         }
       }
 
       .cellar-text-6 {
-        @include font-base($font-family-source, normal, bold);
+        @include font-base($font-family-lato, normal, 700);
         font-size: 16px;
         line-height: 16px;
         letter-spacing: 0.0168em;
         @include respond-to(mobile) {
-          font-size: 14px;
-          line-height: 14px;
+          font-size: 16px;
+          line-height: 16px;
         }
       }
 
@@ -404,6 +404,10 @@
           border-bottom: none;
         }
 
+        .cellar-text-2 {
+          color: #fff;
+        }
+
         .detail {
           display: flex;
           align-items: center;
@@ -420,14 +424,14 @@
           // }
         }
         .pair {
-          @include font-base($font-family-source, normal, 900);
-          font-size: 25px;
+          @include font-base($font-family-lato, normal, 900);
+          font-size: 24px;
           line-height: 31.04px;
           letter-spacing: 0.0168em;
           padding-left: 10.38px;
           @include respond-to(mobile) {
-            font-size: 22px;
-            line-height: 22px;
+            font-size: 24px;
+            line-height: 24px;
           }
         }
         .chevron {
@@ -1256,23 +1260,23 @@
         }
 
         &__pool {
-          @include font-base($font-family-source, normal, 900);
-          font-size: 30px;
-          line-height: 30px;
+          @include font-base($font-family-lato, normal, 900);
+          font-size: 32px;
+          line-height: 32px;
           text-align: center;
           letter-spacing: 0.0168em;
           color: $white;
           margin-top: 13px;
           @include respond-to(tablet) {
-            @include font-base($font-family-source, normal, 900);
-            font-size: 38px;
-            line-height: 38px;
+            @include font-base($font-family-lato, normal, 900);
+            font-size: 32px;
+            line-height: 32px;
             margin-top: 13px;
           }
           @include respond-to(desktop) {
-            @include font-base($font-family-source, normal, 900);
-            font-size: 38px;
-            line-height: 38px;
+            @include font-base($font-family-lato, normal, 900);
+            font-size: 32px;
+            line-height: 32px;
             margin-top: 13px;
           }
         }
@@ -1288,37 +1292,37 @@
         }
         
         p {
-          @include font-base($font-family-source, normal, 400);
+          @include font-base($font-family-lato, normal, 400);
           font-size: 12px;
           line-height: 12px;
           color: $white;
           letter-spacing: 0.0168em;
           margin-bottom: 0px;
           @include respond-to(tablet) {
-            @include font-base($font-family-source, normal, 400);
+            @include font-base($font-family-lato, normal, 400);
             font-size: 14px;
             line-height: 14px;
           }
           @include respond-to(desktop) {
-            @include font-base($font-family-source, normal, 400);
+            @include font-base($font-family-lato, normal, 400);
             font-size: 14px;
             line-height: 14px;
           }
         }
         span {
           padding-top: 8px;
-          @include font-base($font-family-source, normal, 400);
-          font-size: 10px;
-          line-height: 10px;
-          color: #D4D4D4;
+          @include font-base($font-family-lato, normal, 400);
+          font-size: 12px;
+          line-height: 12px;
+          color: #888585;
           letter-spacing: 0.0168em;
           @include respond-to(tablet) {
-            @include font-base($font-family-source, normal, 400);
+            @include font-base($font-family-lato, normal, 400);
             font-size: 12px;
             line-height: 12px;
           }
           @include respond-to(desktop) {
-            @include font-base($font-family-source, normal, 400);
+            @include font-base($font-family-lato, normal, 400);
             font-size: 12px;
             line-height: 12px;
           }
@@ -1327,7 +1331,7 @@
       &__footer {
         text-align: center;
         .add-liquidity-button {
-          @include font-base($font-family-source, normal, bold);
+          @include font-base($font-family-lato, normal, bold);
           font-size: 8.6px;
           line-height: 12.95px;
           display: flex;
@@ -1349,7 +1353,7 @@
             width: 203.79px;
             height: 49px;
             border-radius: 10.5px;
-            @include font-base($font-family-source, normal, bold);
+            @include font-base($font-family-lato, normal, bold);
             font-size: 20px;
             line-height: 18.6px;
             margin-bottom: 33px;
@@ -1359,7 +1363,7 @@
             width: 203.79px;
             height: 49px;
             border-radius: 10.5px;
-            @include font-base($font-family-source, normal, bold);
+            @include font-base($font-family-lato, normal, bold);
             font-size: 20px;
             line-height: 18.6px;
             margin-bottom: 33px;
@@ -1370,7 +1374,7 @@
     }
 
     .cellar-badge {
-      @include font-base($font-family-source, normal, 900);
+      @include font-base($font-family-lato, normal, 900);
       font-size: 6.5px;
       line-height: 9.3px;
       width: 43px;
@@ -1384,14 +1388,14 @@
       @include respond-to(tablet) {
         width: 93px;
         height: 24.76px;
-        @include font-base($font-family-source, normal, 900);
+        @include font-base($font-family-lato, normal, 900);
         font-size: 14.6292px;
         line-height: 19.88px;
       }
       @include respond-to(desktop) {
         width: 93px;
         height: 24.76px;
-        @include font-base($font-family-source, normal, 900);
+        @include font-base($font-family-lato, normal, 900);
         font-size: 14.6292px;
         line-height: 19.88px;
       }
@@ -1406,10 +1410,10 @@
         margin-top: 32px;
       }
       &-title {
-        @include font-base($font-family-source, normal, 500);
+        @include font-base($font-family-lato, normal, 500);
         color: #d4d4d4;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         @include respond-to(tablet) {
           font-size: 16px;
           line-height: 16px;
@@ -1420,10 +1424,10 @@
         }
       }
       &-value {
-        @include font-base($font-family-source, normal, bold);
+        @include font-base($font-family-lato, normal, bold);
         color: $white;
-        font-size: 30px;
-        line-height: 30px;
+        font-size: 35px;
+        line-height: 35px;
         margin-top: 13px;
         @include respond-to(tablet) {
           font-size: 35px;
